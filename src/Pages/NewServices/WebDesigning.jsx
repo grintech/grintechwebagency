@@ -1,0 +1,199 @@
+import React, { useState } from "react";
+import Header from "../../Components/Header/Header";
+import { WhatsAppWidget } from "react-whatsapp-widget";
+import "react-whatsapp-widget/dist/index.css";
+import { Link } from 'react-router-dom';
+import "./newService.css";
+import Footer from "../../Components/Footer/Footer";
+import { Helmet } from "react-helmet";
+import Client2 from "../Main-page/Client2";
+import Client3 from "../Main-page/Client3";
+import data from "../OurWorks/data";
+import data1 from "../OurWorks/data1";
+import { Icon } from '@iconify/react';
+
+const WebDesigning = () => {
+  const [sites, setSites] = useState(data);
+  const [apps, setApps] = useState(data1);
+
+  return (
+    < div className="new_servicepage" >
+
+     <Helmet>
+      <meta charSet="utf-8" />
+        <title>Professional Web Design Services - Build Your Dream Website</title>
+        <meta name="description" content="Unlock your online potential with our professional web design services. We create custom, responsive, and user-friendly websites that help elevate your brand, engage visitors, and boost conversions" />
+        <link rel='canonical' href='/services/web-designing'  />
+      </Helmet>
+
+
+      <Header />
+      <WhatsAppWidget
+        phoneNumber="8264420387"
+        message="Hello, how can I help you?"
+        companyName="Grintech Web Agency"
+      />
+
+      <section className="new-service-hero">
+        <div className="container">
+          <div className="row py-4">
+          <div className="col-md-6 d-flex flex-column justify-content-center ">
+          <p className='small_head'>Web Designing</p>
+              <h1 className="mb-3">
+              Boost Your Online Presence with Expert Website Design!
+              </h1>
+              <p className="mb-4">We create visually stunning, user-friendly, and responsive <strong>website Design Services</strong> to your business needs. Elevate your brand, engage customers, and drive conversions with our cutting-edge web design solutions. </p>
+              <Link to="/contact" >
+                <button type="button" class="btn btn-contact">
+                 Hire Developer  today! 
+                </button>
+              </Link>
+            </div>
+            <div className="col-md-5 offset-md-1 d-flex justify-content-center  align-items-center position-relative">
+              <img
+                className="w-100 bounce"
+                alt="service-hero"
+                src="/img/web_design.png"
+              ></img>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+       <section className="service-content py-5">
+              <div className="container">
+                <h2>Our Design Offerings</h2>
+                <div className="row justify-content-center mt-5">
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="web-design"
+                            src="/img/web-design.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">UI/UX Design
+                        </h5>
+                        <p className="card-text">
+                        Seamless, intuitive, and visually stunning designs that drive engagement and conversions
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="photoshop"
+                            src="/img/photoshop.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">Photoshop / AI
+                        </h5>
+                        <p className="card-text">
+                        Stunning designs, flawless edits, and creative visuals tailored to elevate your brand and captivate audiences.
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="figma"
+                            src="/img/figma.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">Figma / Adobe XD
+                        </h5>
+                        <p className="card-text">
+                        Create stunning, user-friendly interfaces with powerful tools for seamless collaboration and exceptional UX.
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="html-css-bootstrap"
+                            src="/img/html.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">HTML5/CSS3/BOOTSTRAP</h5>
+                        <p className="card-text">
+                        Fast, flexible, and mobile-friendly designs to enhance user experience effortlessly.
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="vue"
+                            src="/img/vue.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">VUE JS</h5>
+                        <p className="card-text">
+                        Build fast, interactive, and scalable applications with a lightweight, flexible, and efficient JavaScript framework.
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+                    <div className="card h-100">
+                      <div className="card-body">
+                        <div className="icon_div">
+                          <img
+                            alt="react"
+                            src="/img/react.png"
+                          ></img>
+                        </div>
+                        <h5 className="card-title">React JS</h5>
+                        <p className="card-text">
+                        Fast, efficient, and user-friendly interfaces powered by a flexible and modern JavaScript library.
+                        </p>
+                        <Link to='/contact' className=""><img className="right-arrow" src="/img/right-arrow.png" alt="" /></Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section className='portfolio pb-5'>
+        <div className='container'> <h3>Our Portfolio</h3>
+          <h6> Web Development</h6>
+          <Client2 sites={sites} />
+          <Link to="/our-works" style={{ color: "#014072" }}>View all <span className="new-get"><Icon icon="bi:arrow-right" /></span></Link>
+
+          <div className='mt-5'>
+            <h6> Mobile Development</h6>
+            <Client3 apps={apps} />
+            <Link to="/our-works" style={{ color: "#014072" }}>View all <span className="new-get"><Icon icon="bi:arrow-right" /></span></Link>
+          </div>
+
+        </div>
+
+      </section>
+
+        <Footer />
+
+    </div>
+  );
+};
+
+export default WebDesigning;
