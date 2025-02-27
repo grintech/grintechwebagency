@@ -11,6 +11,9 @@
 # production
 /build
 
+# ignore build zip files
+/build*.zip
+
 # misc
 .DS_Store
 .env
