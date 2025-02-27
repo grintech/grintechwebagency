@@ -3,7 +3,6 @@
   height: max-content;
   background-color: #014072;
   padding-bottom: 40px;
-
 }
 
 .ourwork_main {
@@ -18,7 +17,7 @@
 
 .ourwork_main_div1 h1 {
   font-size: 45px;
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .our-works p {
@@ -31,16 +30,12 @@
   margin-top: 50px;
 }
 
-
 .work__tabbing_inner {
   margin: 20px 0;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-
-
 
 .work__tabbing_inner button {
   font-weight: 500;
@@ -49,8 +44,6 @@ flex-wrap: wrap;
   font-size: 18px;
   margin-bottom: 10px;
 }
-
-
 
 .work__tabbing_inner button:hover {
   color: rgb(246, 102, 102);
@@ -66,7 +59,6 @@ flex-wrap: wrap;
   display: block;
   cursor: pointer;
   overflow: hidden;
-
 }
 
 .clients {
@@ -93,14 +85,13 @@ flex-wrap: wrap;
   padding: 20px;
 }
 
-
 .content::after {
   background: black;
   opacity: 70%;
   position: absolute;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   color: #ffffff;
@@ -109,7 +100,6 @@ flex-wrap: wrap;
 .content p::after {
   opacity: 1;
   color: white;
-
 }
 
 .content_link {
@@ -146,28 +136,24 @@ flex-wrap: wrap;
   z-index: 1;
 }
 
-
-
 .example .content:hover .text {
   opacity: 1;
   transform: translateY(50px);
   -webkit-transform: translateY(50px);
 }
 
-
 .content span {
   position: absolute;
-
 }
 
 .decoration.left-bottom,
 .decoration.left-top {
   left: 0;
-  border-left: .2rem solid #fff;
+  border-left: 0.2rem solid #fff;
   -webkit-transform: translate(0);
   transform: translate(0);
   left: 0;
-  border-left: .2rem solid #fff;
+  border-left: 0.2rem solid #fff;
   -webkit-transform: translate(0);
   transform: translate(0);
 }
@@ -179,53 +165,50 @@ flex-wrap: wrap;
   height: 1.5rem;
   display: block;
   position: absolute;
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .left-bottom,
 .left-top {
-
   left: 0;
-  border-left: .2rem solid #fff;
+  border-left: 0.2rem solid #fff;
   -webkit-transform: translate(0);
   transform: translate(0);
   left: 0;
-  border-left: .2rem solid #fff;
+  border-left: 0.2rem solid #fff;
   -webkit-transform: translate(0);
   transform: translate(0);
 }
 
 .left-top {
   top: 0;
-  border-top: .2rem solid #fff;
+  border-top: 0.2rem solid #fff;
 }
 
 .left-bottom {
   bottom: 0;
-  border-bottom: .2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
 }
-
 
 .right-bottom,
 .right-top {
-
   right: 0;
-  border-right: .2rem solid #fff;
+  border-right: 0.2rem solid #fff;
   -webkit-transform: translate(0);
   transform: translate(0);
 }
 
 .right-top {
   top: 0;
-  border-top: .2rem solid #fff;
+  border-top: 0.2rem solid #fff;
 }
 
 .right-bottom {
   bottom: 0;
-  border-bottom: .2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
 }
 
 .example:focus .content .decoration.left-top,
@@ -255,22 +238,20 @@ flex-wrap: wrap;
 .works_consultation {
   background-color: #014072;
   color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .works_consultation button {
   outline: 1px solid #fff;
-  ;
-
-color: #014072;
-    background-color: #FFF;
-    transition: all 0.4s;
+  color: #014072;
+  background-color: #fff;
+  transition: all 0.4s;
 }
 
 .works_consultation button:hover {
   color: #014072;
-  background-color: #FFF;
+  background-color: #fff;
 
   transition: all 0.4s;
 }
@@ -282,9 +263,8 @@ color: #014072;
 .seowork {
   padding-top: 100px;
   height: max-content;
-background-image: url(../../assets/images/backgroundImage.jpg);
+  background-image: url(../../assets/images/backgroundImage.jpg);
   padding-bottom: 40px;
-
 }
 
 .seowork_main {
@@ -302,8 +282,6 @@ background-image: url(../../assets/images/backgroundImage.jpg);
   font-weight: 900;
 }
 
-
-
 .seowork_heading p {
   font-size: 45px;
   color: #014072;
@@ -316,13 +294,9 @@ background-image: url(../../assets/images/backgroundImage.jpg);
   font-size: 15px;
   font-weight: 600;
   text-align: center;
-
 }
 
-
-
 .seotablediv {
-
   border-radius: 10px;
 }
 
@@ -380,11 +354,8 @@ table.table-striped td:not(:last-child) {
   vertical-align: top;
 }
 
-
-
 .case-st th {
   text-transform: capitalize;
-
 }
 
 tr {
@@ -393,7 +364,7 @@ tr {
 
 .seorankingtable {
   background-color: #486b88;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -402,17 +373,16 @@ tr {
 
 .seorankingtable2 {
   background-color: #02335b;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
   padding-bottom: 50px;
 }
 
-
 .seorankingtable3 {
   background-color: #486b88;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -421,7 +391,7 @@ tr {
 
 .seorankingtable4 {
   background-color: #02335b;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -430,7 +400,7 @@ tr {
 
 .seorankingtable5 {
   background-color: #486b88;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -439,54 +409,46 @@ tr {
 
 .seorankingtable a {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   padding: 5px;
-
 }
 
 .seorankingtable2 a {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   padding: 5px;
-
 }
-
 
 .seorankingtable3 a {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   padding: 5px;
-
 }
-
 
 .seorankingtable4 a {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   padding: 5px;
-
 }
 
 .seorankingtable5 a {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   padding: 5px;
-
 }
 
-.theading{
+.theading {
   width: 150px;
 }
 
-@media only screen and (max-width:767px){
+@media only screen and (max-width: 767px) {
   .work__tabbing_inner button {
     font-size: 16px;
     margin-bottom: 5px;
   }
 
   .works_consultation img {
-   margin: 0;
-   padding-top: 30px;
+    margin: 0;
+    padding-top: 30px;
+  }
 }
-}
-

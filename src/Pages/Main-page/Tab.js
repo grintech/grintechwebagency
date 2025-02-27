@@ -123,7 +123,8 @@ const Tab = () => {
                     <div className="col-md-5 col-sm-12">
                       <div className="tab-content-box">
                         <h2>Web Designing</h2>
-                        <p>The agency specializes in designing and developing attractive and user-friendly websites. They can create custom website designs tailored to your specific needs and preferences.</p>
+                        {/* <p>The agency specializes in designing and developing attractive and user-friendly websites. They can create custom website designs tailored to your specific needs and preferences.</p> */}
+                        <p>Grintech Web Agency offers top-tier web design services, crafting visually stunning, user-friendly, and responsive websites tailored to your business needs. Our expert team combines creativity with cutting-edge technology to deliver engaging digital experiences that drive results. Whether you need a brand-new website or a redesign, we ensure seamless functionality and modern aesthetics to elevate your online presence. </p>
                        
 
 
@@ -174,12 +175,12 @@ const Tab = () => {
                     <div className="col-md-6 col-sm-12">
                       <div className="tab-content-box">
                         <h2>UI /UX</h2>
-                        {/* <p>Grintech Web Agency can help you with creating visually appealing designs for various purposes, such as logos, banners, brochures, and other marketing materials.</p> */}
-                        <ul>
+                        {/* <ul>
                           <li><b>User Research and Analysis:</b> Understanding user needs and behaviors to inform design decisions.</li>
                           <li><b>Wireframing and Prototyping:</b> Creating interactive prototypes to visualize app flow and functionality</li>
                           <li><b>Visual Design:</b> Crafting aesthetically pleasing and user-friendly interfaces.</li>
-                        </ul>
+                        </ul> */}
+                        <p>Elevate your brand with our expert UI/UX design services! We craft intuitive, visually stunning, and user-friendly experiences that captivate audiences and drive engagement. From wireframes to prototypes, we design seamless digital interactions that enhance usability and boost conversions. Let’s create something amazing together!</p>
                       
                         <div className="new-tab-button ">
                           {/* <Link to="/our-services-photoshop">Explore  */}
@@ -211,12 +212,14 @@ const Tab = () => {
                         {/* <h2>CMS</h2> */}
                         {/* <p>CMS stands for Content Management System. Grintech Web Agency can assist you in implementing a CMS for your website, enabling you to easily manage and update your site's content without requiring technical expertise.</p> */}
                         <h2>Web Development</h2>
-                        {/* <p>Our skilled team designs and develops custom websites tailored to your business needs, ensuring they are fast, secure, and optimized for search engines. From e-commerce platforms to corporate websites, we leverage the latest technologies to create engaging, scalable web solutions that help you stand out in the digital landscape.</p> */}
-                        <ul>
+                        {/* <ul>
                           <li><b>Front-End Development:</b>Designing visually appealing and responsive interfaces using HTML, CSS, JavaScript, and modern libraries like React, Angular, and Vue.js.</li>
                           <li><b>Back-End Development:</b>Creating secure and scalable server-side applications using Node.js, Python, Ruby on Rails, and PHP.</li>
                           <li><b>Full-Stack Development:</b>Providing end-to-end solutions by combining front-end and back-end expertise to deliver comprehensive web applications.</li>
-                        </ul>
+                        </ul> */}
+                        <p>
+                        Our Agency specializes in cutting-edge web development, offering expert front-end, back-end, and full-stack solutions. We craft visually stunning, responsive interfaces using modern frameworks like React, Angular, and Vue.js, while ensuring secure and scalable back-end systems with Node.js, Python, Ruby on Rails, and PHP. From sleek designs to powerful functionality, we deliver seamless digital experiences.
+                        </p>
                         <div className="new-tab-button ">
                           <Link to="/our-works">Explore 
                           <span className="new-get"><Icon icon="bi:arrow-right" /></span>
@@ -246,13 +249,15 @@ const Tab = () => {
                       <div className="tab-content-box">
                         {/* <h2>PHP</h2> */}
                         {/* <p>PHP is a popular programming language used for web development. Grintech Web Agency has expertise in PHP development and can create dynamic and interactive websites using this language.</p> */}
-                        <h2>Mobile Application</h2>
-                         {/* <p>We specialize in mobile application development, creating innovative solutions for iOS and Android platforms. Our team builds user-friendly apps that combine sleek design with powerful functionality, tailored to enhance user engagement and meet your business goals.</p> */}
-                         <ul>
+                        <h2>Mobile Application Development</h2>
+                         {/* <ul>
                           <li><b>iOS Development:</b>Building robust and intuitive apps for iPhone and iPad users, leveraging Swift and Objective-C.</li>
                           <li><b>Android Development:</b>Crafting engaging and high-performance apps for Android devices using Java and Kotlin.</li>
                           <li><b>Cross-Platform Development</b>Delivering seamless experiences across multiple platforms with frameworks like React Native, Flutter, and Xamarin.</li>
-                        </ul>
+                        </ul> */}
+                        <p>
+                        GrinTech Web Agency specializes in mobile application development, creating high-performance and user-friendly apps for iOS and Android. Our expertise spans <strong>Swift</strong> and <strong>Objective-C</strong> for iPhone and iPad, <strong>Java</strong> and <strong>Kotlin</strong> for Android, and <strong>cross-platform solutions</strong> using React Native, Flutter, and Xamarin. We build seamless, scalable, and engaging mobile experiences tailored to your business needs. 
+                        </p>
                         <div className="new-tab-button ">
                           {/* <Link to="/our-services-cakephp">Explore  */}
                           <Link to="/our-works">Explore 
@@ -287,15 +292,16 @@ const Tab = () => {
                     <div className="col-md-6 col-sm-12">
                       <div className="tab-content-box">
                         <h2>Digital Marketing</h2>
-                        {/* <p>The agency offers digital marketing services to help you promote your business online and reach your target audience effectively. This may include strategies such as search engine optimization (SEO), social media marketing, pay-per-click (PPC) advertising, and more.</p> */}
-                        <ul>
+                      
+                        {/* <ul>
                           <li><b>Search Engine Optimization (SEO): </b>Enhancing your website's visibility on search engines to attract more organic traffic.</li>
                           <li><b>Social Media Marketing:</b>Leveraging platforms like Facebook, Instagram, Twitter, and LinkedIn to engage with your audience and build your brand.</li>
                           <li><b>Pay-Per-Click (PPC) Advertising:</b>Running targeted ad campaigns on platforms like Google Ads and social media to drive immediate traffic and conversions.</li>
                           <li><b>Content Marketing:</b>Creating valuable and relevant content to attract, engage, and retain your target audience.</li>
                           <li><b>Email Marketing:</b>Building and managing email campaigns to nurture leads and drive customer loyalty.</li>
                           <li><b>Analytics and Reporting: </b>Monitoring and analyzing marketing performance to optimize strategies and ensure maximum ROI</li>
-                        </ul>
+                        </ul> */}
+                        <p>We specialize in <strong>SEO, Social Media Marketing, PPC, Content Marketing, Email Marketing, and Analytics</strong> to help businesses grow. Our data-driven strategies ensure <strong>higher visibility, better engagement, and increased conversions</strong> for maximum ROI.<br /> Let’s take your brand to the next level!</p>
                         <div className="new-tab-button ">
                           {/* <Link to="/our-services-seo-smm-smo">Explore */}
                           <Link to="/our-works">Explore
@@ -324,8 +330,11 @@ const Tab = () => {
                     <div className="col-md-5 col-sm-12">
                       <div className="tab-content-box">
                         <h2>Server</h2>
-                        <p>The server category likely includes additional services provided by Grintech Web Agency. These could vary depending on specific client requirements and may include services like website maintenance, e-commerce development, database management and more.</p>
-                        {/* <p>The server category likely includes additional services provided by Grintech Web Agency. These could vary depending on specific client requirements and may include services like website maintenance, e-commerce development, mobile app development, UI/UX design, and more.</p> */}
+                        {/* <p>The server category likely includes additional services provided by Grintech Web Agency. These could vary depending on specific client requirements and may include services like website maintenance, e-commerce development, database management and more.</p> */}
+                        <p>
+                        Grintech Web Agency offers a range of server-related services tailored to meet diverse client needs. These may include website hosting, maintenance, e-commerce infrastructure, database management, security enhancements, and performance optimization. With a focus on reliability and scalability, Grintech ensures seamless online operations for businesses of all sizes.
+                        </p>
+                       
                         <div className="new-tab-button ">
                           {/* <Link to="/our-services-content-writing">Explore  */}
                           <Link to="/our-works">Explore 

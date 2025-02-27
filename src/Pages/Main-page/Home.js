@@ -60,7 +60,7 @@ const Home = () => {
     setIsFirstVideoPlaying(false);
   };
 
- 
+
 
 
   useEffect(() => {
@@ -70,17 +70,17 @@ const Home = () => {
   })
 
 
-  
+
 
 
   return (
-    
+
     <div className='app'>
       <Helmet>
-      <meta charSet="utf-8" />
-      <title>Grintech Web Agency - Premium Website Development Services</title>
-      <meta name="description" content="Best mobile app and web development agency. With our top website developers you can use solutions that are specifically designed to meet your demands." />
-      <link rel='canonical' href='https://grintechwebagency.com'  />
+        <meta charSet="utf-8" />
+        <title>Grintech Web Agency - Premium Website Development Services</title>
+        <meta name="description" content="Best mobile app and web development agency. With our top website developers you can use solutions that are specifically designed to meet your demands." />
+        <link rel='canonical' href='https://grintechwebagency.com' />
       </Helmet>
 
       <Header />
@@ -183,56 +183,56 @@ const Home = () => {
         </div>
       </section> */}
 
-     
+
 
       <section className='py-5'>
         <div className='container mobile_dev'>
-        <h2 className='text-center fw-bold'>Mobile Application Development</h2>
+          <h2 className='text-center fw-bold'>Mobile Application Development</h2>
           <div className='row align-items-center pt-4'>
             <div className='col'>
               <ul className='p-0'>
                 <li className='d-flex'>
-                   <p className='mobile_no '>01</p>
-                   <p className='m-0'><b>Swift:</b> Experience in building high-quality web applications using Swift for iOS, Mac. </p>
-                 </li>
+                  <p className='mobile_no '>01</p>
+                  <p className='m-0'><b>Swift:</b> Experience in building high-quality web applications using Swift for iOS, Mac. </p>
+                </li>
                 <li className='d-flex'>
-                   <p className='mobile_no '>02</p>
-                   <p className='m-0'> <b>Ionic:</b> Ionic offers a library of pre-designed UI components, such as buttons, cards and more. </p>
-                 </li>
+                  <p className='mobile_no '>02</p>
+                  <p className='m-0'> <b>Ionic:</b> Ionic offers a library of pre-designed UI components, such as buttons, cards and more. </p>
+                </li>
                 <li className='d-flex'>
-                   <p className='mobile_no '>03</p>
-                   <p className='m-0'><b>React Native:</b> A JavaScript framework for building native apps.</p>
-                 </li>
-                
+                  <p className='mobile_no '>03</p>
+                  <p className='m-0'><b>React Native:</b> A JavaScript framework for building native apps.</p>
+                </li>
+
               </ul>
             </div>
             <div className='col-lg-6'>
-              <img src='/img/back7.png' className='w-100' alt='' />
+              <img src='/img/back7.png' className='w-100 home_mobile_img' alt='mobile-app-development' />
             </div>
             <div className='col'>
-            <ul className='p-0'>
+              <ul className='p-0'>
                 <li className='d-flex'>
-                   <p className='mobile_no '>04</p>
-                   <p className='m-0'><b>Flutter:</b> A UI toolkit from Google for building natively compiled applications </p>
-                 </li>
+                  <p className='mobile_no '>04</p>
+                  <p className='m-0'><b>Flutter:</b> A UI toolkit from Google for building natively compiled applications </p>
+                </li>
                 <li className='d-flex'>
-                   <p className='mobile_no '>05</p>
-                   <p className='m-0'><b>Xamarin:</b> A Microsoft framework for building cross-platform apps using C#.</p>
-                 </li>
+                  <p className='mobile_no '>05</p>
+                  <p className='m-0'><b>Xamarin:</b> A Microsoft framework for building cross-platform apps using C#.</p>
+                </li>
                 <li className='d-flex'>
-                   <p className='mobile_no '>06</p>
-                   <p className='m-0'><b>Java/Kotlin:</b> For Android development.</p>
+                  <p className='mobile_no '>06</p>
+                  <p className='m-0'><b>Java/Kotlin:</b> For Android development.</p>
 
-                 </li>
-                
+                </li>
+
               </ul>
             </div>
-          
+
           </div>
         </div>
       </section>
 
-      
+
 
 
       <section id="counter-stats" className="counter-stats" style={{ backgroundImage: `url(${projectsbg})` }}>
@@ -300,7 +300,7 @@ const Home = () => {
                 <li className='mb-2'><b>Quality Assurance: </b> Rigorous testing processes ensure our apps are reliable, secure, and perform excellently under all conditions.</li>
                 <li className='mb-2'><b>Client-Centric Approach:</b> We prioritize communication and collaboration, keeping you involved and informed throughout the development process.</li>
               </ul>
-              <Link to="/about">Explore <span className="new-get"><Icon icon="bi:arrow-right" /></span></Link>
+              <Link to="/about" className='ms-3'>Explore <span className="new-get"><Icon icon="bi:arrow-right" /></span></Link>
             </div>
             <div className='col-lg-5'>
               <img src={homeabout} className="img-fluid home-abt" alt="about"></img>
@@ -308,12 +308,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-       <section className='home_process '>
+
+      <section className='home_process '>
         <div className='container'>
           <h2 className='mb-5 fw-bold'>Our Process</h2>
 
-            {/* <div className='row mt-5'>
+          {/* <div className='row mt-5'>
               <div className=' col-lg-3 col-md-3 col-6'>
                  <div className='process_box '>
                  <div className='card text-center'>
@@ -424,78 +424,78 @@ const Home = () => {
                
             </div> */}
 
-               <div className='d-flex flex-wrap mt-5 align-items-center justify-content-center new_row'>
-                 <div className='process_box process_box1'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>01</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Discovery and Planning</h5>
-                    <p className='m-0'>Understanding your needs and defining project requirements.</p>
-                  </div>
-                  </div>
-                 </div>
-                 <div className='process_box process_box2'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>02</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Design and Prototyping</h5>
-                    <p className='m-0'> Creating design mockups and interactive prototypes for feedback and approval.</p>
-                  </div>
-                  </div>
-                 </div>
-                 <div className='process_box process_box3'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>03</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Development</h5>
-                    <p className='m-0'>Building the app using agile methodologies to ensure timely delivery and flexibility.</p>
-                  </div>
-                  </div>
-                 </div>
-                 <div className='process_box process_box4'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>04</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Testing and QA</h5>
-                    <p className='m-0'>Conducting thorough testing to identify and fix any issues.</p>
-                  </div>
-                  </div>
-                 </div>
-                 <div className='process_box process_box5'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>05</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Deployment</h5>
-                    <p className='m-0'>Launching the app and making it available to users.</p>
-                  </div>
-                  </div>
-                 </div>
-                 <div className='process_box process_box6'>
-                 <div className='card text-center'>
-                 <div className='process_circle_main'>
-                 <div className='process_circle'>06</div>
-                 </div>
-                  <div className='card-body pt-5 mt-3'>
-                    <h5>Post-Launch Support</h5>
-                    <p className='m-0'>Offering continuous support and updates to maintain app performance.</p>
-                  </div>
-                  </div>
-                 </div>
+          <div className='d-flex flex-wrap mt-5 align-items-center justify-content-center new_row'>
+            <div className='process_box process_box1'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>01</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Discovery and Planning</h5>
+                  <p className='m-0'>Understanding your needs and defining project requirements.</p>
+                </div>
+              </div>
             </div>
+            <div className='process_box process_box2'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>02</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Design and Prototyping</h5>
+                  <p className='m-0'> Creating design mockups and interactive prototypes for feedback and approval.</p>
+                </div>
+              </div>
+            </div>
+            <div className='process_box process_box3'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>03</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Development</h5>
+                  <p className='m-0'>Building the app using agile methodologies to ensure timely delivery and flexibility.</p>
+                </div>
+              </div>
+            </div>
+            <div className='process_box process_box4'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>04</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Testing and QA</h5>
+                  <p className='m-0'>Conducting thorough testing to identify and fix any issues.</p>
+                </div>
+              </div>
+            </div>
+            <div className='process_box process_box5'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>05</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Deployment</h5>
+                  <p className='m-0'>Launching the app and making it available to users.</p>
+                </div>
+              </div>
+            </div>
+            <div className='process_box process_box6'>
+              <div className='card text-center'>
+                <div className='process_circle_main'>
+                  <div className='process_circle'>06</div>
+                </div>
+                <div className='card-body pt-5 mt-3'>
+                  <h5>Post-Launch Support</h5>
+                  <p className='m-0'>Offering continuous support and updates to maintain app performance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          
+
         </div>
-        </section>         
+      </section>
 
       {/* <Infographics /> */}
 
@@ -547,9 +547,9 @@ const Home = () => {
             <div className='alldisplayflex'>
               {/* <img src={PartnerImage1} className="img-fluid w-50 " alt="Partner Image 1" /> */}
 
-             <Link  className='w-50 text-center'> <img src={PartnerImage2} className="img-fluid " alt="Partner1" /> </Link>
-             
-             <Link target='_blank' to='https://whitehatseo.in' className='w-50 text-center'> <img src={PartnerImage3} className="img-fluid " alt="Partner2" /></Link>
+              <Link className='w-50 text-center'> <img src={PartnerImage2} className="img-fluid " alt="Partner1" /> </Link>
+
+              <Link target='_blank' to='https://whitehatseo.in' className='w-50 text-center'> <img src={PartnerImage3} className="img-fluid " alt="Partner2" /></Link>
 
             </div>
           </div>

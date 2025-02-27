@@ -97,10 +97,10 @@ const Ourworks = () => {
 
         <div>
             <Helmet>
-            <meta charSet="utf-8" />
-        <title>Our Work- We Let Our Portfolio Do The Talk!</title>
-        <meta name="description" content="Our recent projects tell more about our successful implementation of projects and further enhance our credibility among our clients and valued customers." />
-        <link rel='canonical' href='/our-works'  />
+                <meta charSet="utf-8" />
+                <title>Explore Our Projects | Grintech Web Agency Portfolio</title>
+                <meta name="description" content="Discover innovative web solutions in our portfolio. Explore Grintech Web Agency's best projects, showcasing creativity, expertise, and digital excellence." />
+                <link rel='canonical' href='/our-works' />
             </Helmet>
 
 
@@ -110,9 +110,9 @@ const Ourworks = () => {
                 <div className="container">
                     <div className="row ourwork_main">
                         <div className="col-lg-6 ourwork_main_div1">
-                       
-                            <h1 >We Let Our Portfolio Do The Talk!</h1>
-                            <p >Our recent projects tell more about our successful implementation of projects and further enhance our credibility among our clients and valued customers.</p>
+
+                            <h1 >Let Our Portfolio Speak for Itself!</h1>
+                            <p >Our recent projects showcase our expertise and successful project implementations, reinforcing our credibility among clients and valued customers.</p>
                         </div>
                         <div className="col-lg-6">
                             <Form />
@@ -126,7 +126,10 @@ const Ourworks = () => {
 
             <section className="work__tabbing">
                 <div className='container'>
-                    <div className='row'><h2 className='text-center fw-bold'>Explore Our Portfolio</h2></div>
+                    <div className='row'>
+                        <h2 className='text-center fw-bold'>Explore Our Portfolio</h2>
+                        <p className='text-center' >Discover our latest projects that showcase innovation, creativity, and successful solutions tailored for our clients.</p>
+                    </div>
                     <div className=' work__tabbing_inner'>
 
 
@@ -138,7 +141,7 @@ const Ourworks = () => {
                         <button className='btn ' onClick={() => filteredData('react')}>REACT</button>
                         <button className='btn ' onClick={() => filteredData('cms')}>CMS</button>
                         <button className='btn ' onClick={() => filteredData('app')}>MOBILE APP</button>
-                        <button className='btn '> <Link style={{color:"#014072"}} to="/seowork">SEO</Link></button>
+                        <button className='btn '> <Link style={{ color: "#014072" }} to="/seowork">SEO</Link></button>
                     </div>
                 </div>
             </section>
@@ -150,9 +153,9 @@ const Ourworks = () => {
                     <div className='row align-items-center'>
                         <div className='col-md-6'>
                             <h2>Book a Free Consultation</h2>
-                            <br />    
+                            <br />
                             <p>Our team thrives on new projects and challenges. If you have a project in mind then we’d love to hear from you.</p>
-                            <br />  
+                            <br />
                             <Link to='/contact' className="btn btn-action" >Book Free Consultation</Link>
                             {/* <button type="button" className="btn btn-action" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Free Consultation</button> */}
                         </div>
@@ -161,74 +164,68 @@ const Ourworks = () => {
                         </div>
                     </div>
                 </div>
-         
+
             </section>
 
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            {/* <div className="modal-header">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                        {/* <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div> */}
-                            <div className="modal-body modal-body-custom">
-                                <form action="?" method="POST">
-                                    <div className='d-flex justify-content-between '>
-                                        <h4 className='text-center mb-3'> <b style={{ fontWeight: "900" }}>Let's Discuss Your <span style={{ color: "#177a0e" }}>Project</span> </b></h4> <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal-body modal-body-custom">
+                            <form action="?" method="POST">
+                                <div className='d-flex justify-content-between '>
+                                    <h4 className='text-center mb-3'> <b style={{ fontWeight: "900" }}>Let's Discuss Your <span style={{ color: "#177a0e" }}>Project</span> </b></h4> <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+
+                                <div className='row'>
+                                    <div className="mb-3 col-md-6 col-sm-12">
+                                        <label htmlFor="exampleInputEmail1" className="form-label">Full Name <span className='star'>*</span></label>
+                                        <input type="text" name="name2" id="name2" value={userName} onInvalid={handleInvalidname} onInput={handleInputname} className="form-control form_custom_input" aria-describedby="emailHelp" required />
                                     </div>
 
-                                    <div className='row'>
-                                        <div className="mb-3 col-md-6 col-sm-12">
-                                            <label htmlFor="exampleInputEmail1" className="form-label">Full Name <span className='star'>*</span></label>
-                                            <input type="text" name="name2" id="name2" value={userName} onInvalid={handleInvalidname} onInput={handleInputname} className="form-control form_custom_input" aria-describedby="emailHelp" required />
-                                        </div>
-
-                                        <div className="mb-3 col-md-6 col-sm-12">
-                                            <label htmlFor="exampleInputEmail1" className="form-label">Phone</label>
-                                            <input type="tel" placeholder='Phone...' name="phone" id="phone" className="form-control form_custom_input" pattern="[0-9]{9,12}" onChange={handlePhoneChange} onInvalid={handleInvalidphone} onInput={handleInputphone} aria-describedby="emailHelp" required />
-                                        </div>
-                                        <div className="mb-3 col-md-6 col-sm-12">
-                                            <label htmlFor="exampleInputEmail1" className="form-label">Email address <span className='star'>*</span></label>
-                                            <input type="email" className="form-control" aria-describedby="emailHelp" name="email" id="email" onInvalid={handleInvalidemail} onInput={handleInputemail} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
-                                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                                        </div>
-
-                                        <div className="mb-3 col-md-6 col-sm-12">
-                                            <label htmlFor="exampleInputPassword1" className="form-label">Website URL </label>
-                                            <input type="text" className="form-control" id="exampleInputPassword1" />
-                                        </div>
+                                    <div className="mb-3 col-md-6 col-sm-12">
+                                        <label htmlFor="exampleInputEmail1" className="form-label">Phone</label>
+                                        <input type="tel" placeholder='Phone...' name="phone" id="phone" className="form-control form_custom_input" pattern="[0-9]{9,12}" onChange={handlePhoneChange} onInvalid={handleInvalidphone} onInput={handleInputphone} aria-describedby="emailHelp" required />
                                     </div>
-                                    <select className="form-select" aria-label="Default select example">
-                                        <option selected disabled>How we can help you? </option>
-                                        <option value="1">Seo/SMM</option>
-                                        <option value="2">Web Development</option>
-                                        <option value="3">Web Design</option>
-                                    </select>
-
-                                    <div className="mb-3 mt-4">
-                                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Your Message Here</label>
-                                        <textarea className="form-control" rows="2" name="message" id="message" value={messageError} onInvalid={handleInvalidmessage} onInput={handleInputmessage} required></textarea>
+                                    <div className="mb-3 col-md-6 col-sm-12">
+                                        <label htmlFor="exampleInputEmail1" className="form-label">Email address <span className='star'>*</span></label>
+                                        <input type="email" className="form-control" aria-describedby="emailHelp" name="email" id="email" onInvalid={handleInvalidemail} onInput={handleInputemail} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+                                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                     </div>
-                                    {/* <ReCAPTCHA
+
+                                    <div className="mb-3 col-md-6 col-sm-12">
+                                        <label htmlFor="exampleInputPassword1" className="form-label">Website URL </label>
+                                        <input type="text" className="form-control" id="exampleInputPassword1" />
+                                    </div>
+                                </div>
+                                <select className="form-select" aria-label="Default select example">
+                                    <option selected disabled>How we can help you? </option>
+                                    <option value="1">Seo/SMM</option>
+                                    <option value="2">Web Development</option>
+                                    <option value="3">Web Design</option>
+                                </select>
+
+                                <div className="mb-3 mt-4">
+                                    <label htmlFor="exampleFormControlTextarea1" className="form-label">Your Message Here</label>
+                                    <textarea className="form-control" rows="2" name="message" id="message" value={messageError} onInvalid={handleInvalidmessage} onInput={handleInputmessage} required></textarea>
+                                </div>
+                                {/* <ReCAPTCHA
                                         sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                                         onChange={onChangecaptcha}
                                     /> */}
 
-                                    <button type="submit" className="btn " disabled={!disabled} style={{ backgroundColor: "#177a0e", color: "white" }}>Submit</button>
-                                </form>
-                            </div>
-
+                                <button type="submit" className="btn " disabled={!disabled} style={{ backgroundColor: "#177a0e", color: "white" }}>Submit</button>
+                            </form>
                         </div>
-                    </div>
-                </div>
-
-            <section className=''>
-                <div className='container'>
-                    <div className='row'>
 
                     </div>
                 </div>
-            </section>
+            </div>
+
+
             <Footer />
         </div>
     )
