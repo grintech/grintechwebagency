@@ -2,19 +2,18 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import { WhatsAppWidget } from "react-whatsapp-widget";
 import "react-whatsapp-widget/dist/index.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./newService.css";
 import Footer from "../../Components/Footer/Footer";
 import { Helmet } from "react-helmet";
 import Client2 from "../Main-page/Client2";
 import data from "../OurWorks/data";
 import data1 from "../OurWorks/data1";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 import { useState } from "react";
-import personsitting from "../../assets/images/removed.png"
+import personsitting from "../../assets/images/removed.png";
 import { useSidebar } from "../../context/SidebarContext";
 import SidebarContact from "./SidebarContact";
-
 
 const WebDevelopment = () => {
   const [sites, setSites] = useState(data);
@@ -22,15 +21,16 @@ const WebDevelopment = () => {
   const { setIsOpen } = useSidebar();
 
   return (
-    < div className="new_servicepage" >
-
-     <Helmet>
+    <div className="new_servicepage">
+      <Helmet>
         <meta charSet="utf-8" />
-        <title>Web development services near me - Grintech Web Agency</title>
-        <meta name="description" content="Looking for web development services near you? Grintech Web Agency offers expert solutions to build stunning, responsive websites that boost your online presence and drive business growth." />
-        <link rel='canonical' href='/services/web-development'  />
+        <title>Custom Web Development Services | Grin Tech Web Agency</title>
+        <meta
+          name="description"
+          content="Boost your business with Grin Tech's custom web development! Stunning, high-performance websites tailored to your needs. Get started today!"
+        />
+        <link rel="canonical" href="/services/web-development" />
       </Helmet>
-
 
       <Header />
       <WhatsAppWidget
@@ -42,16 +42,20 @@ const WebDevelopment = () => {
       <section className="new-service-hero">
         <div className="container">
           <div className="row py-4">
-          <div className="col-md-6 d-flex flex-column justify-content-center">
-          <p className='small_head'>Web Development</p>
+            <div className="col-md-6 d-flex flex-column justify-content-center">
+              <p className="small_head">Web Development</p>
               <h1 className="mb-3">
-              Custom Web Development for Your Business!
+                Custom Web Development for Your Business!
               </h1>
-              <p className="mb-4">We build fast, secure, and scalable <strong>websites Development Services</strong> to your needs. Enhance your online presence with dynamic, user-friendly, and high-performance solutions!
+              <p className="mb-4">
+                We build fast, secure, and scalable
+                <strong>websites Development Services</strong> to your needs.
+                Enhance your online presence with dynamic, user-friendly, and
+                high-performance solutions!
               </p>
               <Link to="/contact" className="">
                 <button type="button" class="btn btn-contact">
-                 Hire Developer  today! 
+                  Hire Developer today!
                 </button>
               </Link>
             </div>
@@ -62,168 +66,195 @@ const WebDevelopment = () => {
                 src="/img/web-development.png"
               ></img>
             </div>
-            
           </div>
         </div>
       </section>
 
-       <section className="service-content py-5">
-              <div className="container">
-                <h2>Our Web Development Offerings</h2>
-                <p>At <Link to='/' className="fw-bold text-dark" >Grintech Web Agency</Link>, we bring your digital vision to life with high-performance, scalable, and visually stunning websites tailored to your unique business needs. Whether you're looking for a custom-built website, a dynamic e-commerce platform, or a seamless content management system, our expert developers deliver solutions that engage users, boost conversions, and drive business growth. <strong>Services we offered</strong> </p>
-                <div className="row justify-content-center mt-5">
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="php"
-                            src="/img/php.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Core PHP
-                        </h5>
-                        <p className="card-text">
-                        Fast, flexible, and scalable web solutions tailored to your business needs for a seamless and powerful online presence.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
+      <section className="service-content py-5">
+        <div className="container">
+          <h2>Our Web Development Offerings</h2>
+          <p>
+            At
+            <Link to="/" className="fw-bold text-dark">
+              Grintech Web Agency
+            </Link>
+            , we bring your digital vision to life with high-performance,
+            scalable, and visually stunning websites tailored to your unique
+            business needs. Whether you're looking for a custom-built website, a
+            dynamic e-commerce platform, or a seamless content management
+            system, our expert developers deliver solutions that engage users,
+            boost conversions, and drive business growth.
+            <strong>Services we offered</strong>
+          </p>
+          <div className="row justify-content-center mt-5">
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img className="" alt="php" src="/img/php.png"></img>
                   </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="laravel"
-                            src="/img/laravel.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Laravel (9, 10) 
-                        </h5>
-                        <p className="card-text">
-                        Build Robust Web Apps with Laravel 9 & 10! Scalable, secure, and high-performance solutions with clean code and powerful features for seamless development.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="cakephp"
-                            src="/img/cakephp1.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Cakephp 
-                        </h5>
-                        <p className="card-text">
-                        Power Your Web Development with CakePHP! Fast, secure, and scalable framework for building robust web applications with simplicity and flexibility.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="yii"
-                            src="/img/yii.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Ci, Yii Framework</h5>
-                        <p className="card-text">
-                        Build Powerful Web Apps with CI & Yii! Fast, secure, and scalable PHP frameworks for developing high-performance, flexible, and feature-rich web applications.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="wordpress"
-                            src="/img/wordpress.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Wordpress Development</h5>
-                        <p className="card-text">
-                        Custom WordPress Development! Build stunning, responsive, and SEO-friendly websites with powerful features to enhance your brand and grow your business effortlessly.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="ecommerce"
-                            src="/img/ecommerce.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">WooCommerce,eCommerce</h5>
-                        <p className="card-text">
-                        Boost Sales with WooCommerce & eCommerce Solutions! Create secure, user-friendly, and scalable online stores tailored for seamless shopping experiences.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="shopify"
-                            src="/img/shopify.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">Shopify</h5>
-                        <p className="card-text">
-                        Grow Your Online Business with Shopify! Build a secure, scalable, and user-friendly eCommerce store with powerful features for seamless shopping experiences.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <div className="icon_div">
-                          <img
-                            className=""
-                            alt="asp"
-                            src="/img/asp.png"
-                          ></img>
-                        </div>
-                        <h5 className="card-title">ASP .NET</h5>
-                        <p className="card-text">
-                        Build Secure & Scalable Web Apps with ASP.NET! Develop high-performance, robust, and dynamic solutions tailored for seamless business growth and efficiency.
-                        </p>
-                        <Link onClick={() => setIsOpen(true)}>More Details <i className="fa-solid fa-arrow-right"></i></Link>
-                      </div>
-                    </div>
-                  </div>
+                  <h5 className="card-title">Core PHP</h5>
+                  <p className="card-text">
+                    Fast, flexible, and scalable web solutions tailored to your
+                    business needs for a seamless and powerful online presence.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
-        </section>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img
+                      className=""
+                      alt="laravel"
+                      src="/img/laravel.png"
+                    ></img>
+                  </div>
+                  <h5 className="card-title">Laravel (9, 10)</h5>
+                  <p className="card-text">
+                    Build Robust Web Apps with Laravel 9 & 10! Scalable, secure,
+                    and high-performance solutions with clean code and powerful
+                    features for seamless development.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img
+                      className=""
+                      alt="cakephp"
+                      src="/img/cakephp1.png"
+                    ></img>
+                  </div>
+                  <h5 className="card-title">Cakephp</h5>
+                  <p className="card-text">
+                    Power Your Web Development with CakePHP! Fast, secure, and
+                    scalable framework for building robust web applications with
+                    simplicity and flexibility.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img className="" alt="yii" src="/img/yii.png"></img>
+                  </div>
+                  <h5 className="card-title">Ci, Yii Framework</h5>
+                  <p className="card-text">
+                    Build Powerful Web Apps with CI & Yii! Fast, secure, and
+                    scalable PHP frameworks for developing high-performance,
+                    flexible, and feature-rich web applications.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img
+                      className=""
+                      alt="wordpress"
+                      src="/img/wordpress.png"
+                    ></img>
+                  </div>
+                  <h5 className="card-title">Wordpress Development</h5>
+                  <p className="card-text">
+                    Custom WordPress Development! Build stunning, responsive,
+                    and SEO-friendly websites with powerful features to enhance
+                    your brand and grow your business effortlessly.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img
+                      className=""
+                      alt="ecommerce"
+                      src="/img/ecommerce.png"
+                    ></img>
+                  </div>
+                  <h5 className="card-title">WooCommerce,eCommerce</h5>
+                  <p className="card-text">
+                    Boost Sales with WooCommerce & eCommerce Solutions! Create
+                    secure, user-friendly, and scalable online stores tailored
+                    for seamless shopping experiences.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img
+                      className=""
+                      alt="shopify"
+                      src="/img/shopify.png"
+                    ></img>
+                  </div>
+                  <h5 className="card-title">Shopify</h5>
+                  <p className="card-text">
+                    Grow Your Online Business with Shopify! Build a secure,
+                    scalable, and user-friendly eCommerce store with powerful
+                    features for seamless shopping experiences.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-3 col-sm-6 mb-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <div className="icon_div">
+                    <img className="" alt="asp" src="/img/asp.png"></img>
+                  </div>
+                  <h5 className="card-title">ASP .NET</h5>
+                  <p className="card-text">
+                    Build Secure & Scalable Web Apps with ASP.NET! Develop
+                    high-performance, robust, and dynamic solutions tailored for
+                    seamless business growth and efficiency.
+                  </p>
+                  <Link onClick={() => setIsOpen(true)}>
+                    More Details <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section className="portfolio pb-5">
+      <section className="portfolio pb-5">
         <div className="container">
           <h3>Our Portfolio</h3>
           <h6> Web Development</h6>
@@ -264,8 +295,12 @@ const WebDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The timeline for building a website varies depending on its complexity and specific requirements. On average, a standard website may take 4-6 weeks, while more complex projects like e-commerce platforms could take 8-12 weeks. It's essential to discuss your specific needs with the development team to get an accurate timeline.
-
+                      The timeline for building a website varies depending on
+                      its complexity and specific requirements. On average, a
+                      standard website may take 4-6 weeks, while more complex
+                      projects like e-commerce platforms could take 8-12 weeks.
+                      It's essential to discuss your specific needs with the
+                      development team to get an accurate timeline.
                     </div>
                   </div>
                 </div>
@@ -279,7 +314,7 @@ const WebDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                     Will my website be mobile-friendly?
+                      Will my website be mobile-friendly?
                     </button>
                   </h2>
                   <div
@@ -289,7 +324,11 @@ const WebDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Yes, ensuring that your website is mobile-friendly is crucial. A responsive design allows your site to adapt seamlessly to various devices, including smartphones and tablets, providing an optimal user experience across all platforms.
+                      Yes, ensuring that your website is mobile-friendly is
+                      crucial. A responsive design allows your site to adapt
+                      seamlessly to various devices, including smartphones and
+                      tablets, providing an optimal user experience across all
+                      platforms.
                     </div>
                   </div>
                 </div>
@@ -303,7 +342,7 @@ const WebDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                     Can I update the website myself once it's built?
+                      Can I update the website myself once it's built?
                     </button>
                   </h2>
                   <div
@@ -313,10 +352,14 @@ const WebDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Absolutely. Websites are often built with Content Management Systems (CMS) like WordPress, allowing you to manage and update your site's content without needing technical expertise. Additionally, maintenance services can be provided for ongoing updates and enhancements.
+                      Absolutely. Websites are often built with Content
+                      Management Systems (CMS) like WordPress, allowing you to
+                      manage and update your site's content without needing
+                      technical expertise. Additionally, maintenance services
+                      can be provided for ongoing updates and enhancements.
                     </div>
                   </div>
-               </div>
+                </div>
                 <div className="accordion-item mb-3">
                   <h2 className="accordion-header" id="headingFour">
                     <button
@@ -327,7 +370,7 @@ const WebDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                     How much does a new website cost?
+                      How much does a new website cost?
                     </button>
                   </h2>
                   <div
@@ -337,8 +380,11 @@ const WebDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The cost of a new website depends on various factors, including design complexity, functionality requirements, and the platform used. It's best to discuss your specific needs with the web development team to receive a tailored quote.
-
+                      The cost of a new website depends on various factors,
+                      including design complexity, functionality requirements,
+                      and the platform used. It's best to discuss your specific
+                      needs with the web development team to receive a tailored
+                      quote.
                     </div>
                   </div>
                 </div>
@@ -362,38 +408,43 @@ const WebDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Yes, ongoing maintenance and support are essential to ensure your website remains secure, up-to-date, and performs optimally. Services may include regular updates, security monitoring, and content management assistance. 
+                      Yes, ongoing maintenance and support are essential to
+                      ensure your website remains secure, up-to-date, and
+                      performs optimally. Services may include regular updates,
+                      security monitoring, and content management assistance.
                     </div>
                   </div>
-                  </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='works_consultation'>
-        <div className='container'>
-            <div className='row align-items-center'>
-                <div className='col-md-6'>
-                    <h2>Book a Free Consultation</h2>
-                    <br />    
-                    <p>Our team thrives on new projects and challenges. If you have a project in mind then we’d love to hear from you.</p>
-                    <br />  
-                    <Link to='/contact' className="btn btn-action" >Book Free Consultation</Link>
-                   
-                </div>
-                <div className='col-md-6'>
-                    <img src={personsitting} className='img-fluid'></img>
-                </div>
+      <section className="works_consultation">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h2>Book a Free Consultation</h2>
+              <br />
+              <p>
+                Our team thrives on new projects and challenges. If you have a
+                project in mind then we’d love to hear from you.
+              </p>
+              <br />
+              <Link to="/contact" className="btn btn-action">
+                Book Free Consultation
+              </Link>
             </div>
+            <div className="col-md-6">
+              <img src={personsitting} className="img-fluid"></img>
+            </div>
+          </div>
         </div>
       </section>
 
-
-        <SidebarContact />
-        <Footer />
-        
+      <SidebarContact />
+      <Footer />
     </div>
   );
 };

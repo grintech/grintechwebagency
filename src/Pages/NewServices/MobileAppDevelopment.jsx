@@ -10,7 +10,7 @@ import Client3 from "../Main-page/Client3";
 // import data from "../OurWorks/data";
 import data1 from "../OurWorks/data1";
 import { Icon } from "@iconify/react";
-import personsitting from "../../assets/images/removed.png"
+import personsitting from "../../assets/images/removed.png";
 import { useSidebar } from "../../context/SidebarContext";
 import SidebarContact from "./SidebarContact";
 
@@ -24,10 +24,10 @@ const MobileAppDevelopment = () => {
     <div className="new_servicepage">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Expert Mobile App Development - Service First, Pay Later</title>
+        <title>Mobile Development Services | Build Your App Today</title>
         <meta
           name="description"
-          content="Get expert mobile app development services with the option to pay later. We deliver high-quality, custom apps tailored to your business needs, ensuring success and growth."
+          content="Get top-notch mobile app development services with Grin Tech! Build high-performing, user-friendly apps for iOS & Android. Start your project today!"
         />
         <link rel="canonical" href="/services/mobile-app-development" />
       </Helmet>
@@ -246,7 +246,6 @@ const MobileAppDevelopment = () => {
 
       <section className="portfolio pb-5">
         <div className="container">
-          
           <h3>Our Portfolio</h3>
           <div>
             <h6> Mobile Development</h6>
@@ -288,7 +287,12 @@ const MobileAppDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    We develop mobile applications for both iOS and Android platforms. Depending on your project requirements, we utilize native development languages like Swift for iOS and Kotlin for Android, as well as cross-platform frameworks such as React Native or Flutter to ensure a seamless experience across devices.
+                      We develop mobile applications for both iOS and Android
+                      platforms. Depending on your project requirements, we
+                      utilize native development languages like Swift for iOS
+                      and Kotlin for Android, as well as cross-platform
+                      frameworks such as React Native or Flutter to ensure a
+                      seamless experience across devices.
                     </div>
                   </div>
                 </div>
@@ -302,7 +306,7 @@ const MobileAppDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                     How long does it take to develop a mobile app?
+                      How long does it take to develop a mobile app?
                     </button>
                   </h2>
                   <div
@@ -312,7 +316,10 @@ const MobileAppDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The development timeline for a mobile app varies based on its complexity, features, and design requirements. A simple app might take a few months to develop, while more complex applications could extend to a year or more.
+                      The development timeline for a mobile app varies based on
+                      its complexity, features, and design requirements. A
+                      simple app might take a few months to develop, while more
+                      complex applications could extend to a year or more.
                     </div>
                   </div>
                 </div>
@@ -326,7 +333,7 @@ const MobileAppDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                     How much does it cost to develop a mobile app?
+                      How much does it cost to develop a mobile app?
                     </button>
                   </h2>
                   <div
@@ -336,10 +343,12 @@ const MobileAppDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The cost of developing a mobile app depends on various factors, including the app's features, design complexity, development time, and the platforms targeted.
+                      The cost of developing a mobile app depends on various
+                      factors, including the app's features, design complexity,
+                      development time, and the platforms targeted.
                     </div>
                   </div>
-               </div>
+                </div>
                 <div className="accordion-item mb-3">
                   <h2 className="accordion-header" id="headingFour">
                     <button
@@ -350,7 +359,7 @@ const MobileAppDevelopment = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                     What is your approach to app prototyping and wireframing?
+                      What is your approach to app prototyping and wireframing?
                     </button>
                   </h2>
                   <div
@@ -360,7 +369,11 @@ const MobileAppDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    We prioritize user experience by creating detailed prototypes and wireframes that visualize the app's flow and functionality. This iterative process allows for early feedback and refinement before proceeding to full development.
+                      We prioritize user experience by creating detailed
+                      prototypes and wireframes that visualize the app's flow
+                      and functionality. This iterative process allows for early
+                      feedback and refinement before proceeding to full
+                      development.
                     </div>
                   </div>
                 </div>
@@ -384,31 +397,40 @@ const MobileAppDevelopment = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Yes, we offer cross-platform development solutions using frameworks like React Native and Flutter. These technologies enable us to develop a single codebase that runs efficiently on both iOS and Android devices, ensuring consistent performance and user experience across platforms.
+                      Yes, we offer cross-platform development solutions using
+                      frameworks like React Native and Flutter. These
+                      technologies enable us to develop a single codebase that
+                      runs efficiently on both iOS and Android devices, ensuring
+                      consistent performance and user experience across
+                      platforms.
                     </div>
                   </div>
-                  </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='works_consultation'>
-        <div className='container'>
-            <div className='row align-items-center'>
-                <div className='col-md-6'>
-                    <h2>Book a Free Consultation</h2>
-                    <br />    
-                    <p>Our team thrives on new projects and challenges. If you have a project in mind then we’d love to hear from you.</p>
-                    <br />  
-                    <Link to='/contact' className="btn btn-action" >Book Free Consultation</Link>
-                   
-                </div>
-                <div className='col-md-6'>
-                    <img src={personsitting} className='img-fluid'></img>
-                </div>
+      <section className="works_consultation">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h2>Book a Free Consultation</h2>
+              <br />
+              <p>
+                Our team thrives on new projects and challenges. If you have a
+                project in mind then we’d love to hear from you.
+              </p>
+              <br />
+              <Link to="/contact" className="btn btn-action">
+                Book Free Consultation
+              </Link>
             </div>
+            <div className="col-md-6">
+              <img src={personsitting} className="img-fluid"></img>
+            </div>
+          </div>
         </div>
       </section>
 

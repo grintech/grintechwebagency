@@ -10,7 +10,7 @@ import Client2 from "../Main-page/Client2";
 import data from "../OurWorks/data";
 import data1 from "../OurWorks/data1";
 import { Icon } from "@iconify/react";
-import personsitting from "../../assets/images/removed.png"
+import personsitting from "../../assets/images/removed.png";
 import SidebarContact from "./SidebarContact";
 import { useSidebar } from "../../context/SidebarContext";
 
@@ -23,12 +23,10 @@ const WebDesigning = () => {
     <div className="new_servicepage">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>
-          Professional Web Design Services - Build Your Dream Website
-        </title>
+        <title>Expert Website Design Services | Grin Tech Web Agency</title>
         <meta
           name="description"
-          content="Unlock your online potential with our professional web design services. We create custom, responsive, and user-friendly websites that help elevate your brand, engage visitors, and boost conversions"
+          content="Get a stunning, high-converting website with Grin Tech Web Agency! Expert design, SEO-friendly, and fully responsive. Elevate your brand today!"
         />
         <link rel="canonical" href="/services/web-designing" />
       </Helmet>
@@ -75,7 +73,7 @@ const WebDesigning = () => {
         <div className="container">
           <h2>Our Design Offerings</h2>
           <p>
-            At{" "}
+            At
             <Link to="/" className="fw-bold text-dark">
               Grintech Web Agency
             </Link>
@@ -86,10 +84,10 @@ const WebDesigning = () => {
             custom web design solutions tailored to meet the unique needs of
             businesses and individuals, ensuring each website is both attractive
             and functional. With over a decade of experience, we are committed
-            to delivering{" "}
+            to delivering
             <Link to="/services" className="fw-bold text-dark">
               top-notch Web Design
-            </Link>{" "}
+            </Link>
             services that help our clients thrive in the digital landscape.
           </p>
 
@@ -246,7 +244,10 @@ const WebDesigning = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The duration varies based on the project's complexity and specific requirements. Generally, a standard website can take several weeks to a few months from initial consultation to launch.
+                      The duration varies based on the project's complexity and
+                      specific requirements. Generally, a standard website can
+                      take several weeks to a few months from initial
+                      consultation to launch.
                     </div>
                   </div>
                 </div>
@@ -260,7 +261,7 @@ const WebDesigning = () => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                     What is responsive web design?
+                      What is responsive web design?
                     </button>
                   </h2>
                   <div
@@ -270,7 +271,10 @@ const WebDesigning = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Responsive web design ensures that a website adapts seamlessly to various devices and screen sizes, providing an optimal viewing experience for users on desktops, tablets, and mobile phones.
+                      Responsive web design ensures that a website adapts
+                      seamlessly to various devices and screen sizes, providing
+                      an optimal viewing experience for users on desktops,
+                      tablets, and mobile phones.
                     </div>
                   </div>
                 </div>
@@ -284,7 +288,8 @@ const WebDesigning = () => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      Can I update the website content on my own after it's built?
+                      Can I update the website content on my own after it's
+                      built?
                     </button>
                   </h2>
                   <div
@@ -294,10 +299,13 @@ const WebDesigning = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Most web design agencies develop websites using content management systems (CMS) like WordPress, allowing clients to easily update and manage their content without needing extensive technical knowledge.
+                      Most web design agencies develop websites using content
+                      management systems (CMS) like WordPress, allowing clients
+                      to easily update and manage their content without needing
+                      extensive technical knowledge.
                     </div>
                   </div>
-               </div>
+                </div>
                 <div className="accordion-item mb-3">
                   <h2 className="accordion-header" id="headingFour">
                     <button
@@ -308,7 +316,8 @@ const WebDesigning = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                     Do you offer search engine optimization (SEO) services with web design?
+                      Do you offer search engine optimization (SEO) services
+                      with web design?
                     </button>
                   </h2>
                   <div
@@ -318,7 +327,11 @@ const WebDesigning = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Many web design agencies incorporate basic on-page SEO practices during the design process to enhance search engine visibility. For advanced SEO strategies, they might offer additional services or recommend specialized experts.
+                      Many web design agencies incorporate basic on-page SEO
+                      practices during the design process to enhance search
+                      engine visibility. For advanced SEO strategies, they might
+                      offer additional services or recommend specialized
+                      experts.
                     </div>
                   </div>
                 </div>
@@ -332,7 +345,8 @@ const WebDesigning = () => {
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      What kind of support and maintenance do you provide post-launch?
+                      What kind of support and maintenance do you provide
+                      post-launch?
                     </button>
                   </h2>
                   <div
@@ -342,31 +356,38 @@ const WebDesigning = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Post-launch support varies by agency. Typically, services include regular updates, security monitoring, backups, and technical support to ensure the website remains functional and up-to-date.
+                      Post-launch support varies by agency. Typically, services
+                      include regular updates, security monitoring, backups, and
+                      technical support to ensure the website remains functional
+                      and up-to-date.
                     </div>
                   </div>
-                  </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='works_consultation'>
-        <div className='container'>
-            <div className='row align-items-center'>
-                <div className='col-md-6'>
-                    <h2>Book a Free Consultation</h2>
-                    <br />    
-                    <p>Our team thrives on new projects and challenges. If you have a project in mind then we’d love to hear from you.</p>
-                    <br />  
-                    <Link to='/contact' className="btn btn-action" >Book Free Consultation</Link>
-                    
-                </div>
-                <div className='col-md-6'>
-                    <img src={personsitting} className='img-fluid'></img>
-                </div>
+      <section className="works_consultation">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h2>Book a Free Consultation</h2>
+              <br />
+              <p>
+                Our team thrives on new projects and challenges. If you have a
+                project in mind then we’d love to hear from you.
+              </p>
+              <br />
+              <Link to="/contact" className="btn btn-action">
+                Book Free Consultation
+              </Link>
             </div>
+            <div className="col-md-6">
+              <img src={personsitting} className="img-fluid"></img>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -25,10 +25,12 @@ const DigitalMarketing = () => {
     <div className="new_servicepage">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Digital Marketing Services - Grow Your Business & Revenue</title>
+        <title>
+          Best Digital Marketing Services | Marketing Agency Near Me
+        </title>
         <meta
           name="description"
-          content="Unlock the potential of your business with our expert digital marketing services. From SEO to social media, we help you grow your online presence, increase traffic, and boost revenue."
+          content="Get expert digital marketing services to grow your business. From SEO to social media, we help you reach your audience and maximize results."
         />
         <link rel="canonical" href="/services/web-development" />
       </Helmet>
@@ -279,7 +281,10 @@ const DigitalMarketing = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Digital marketing involves promoting products or services through online channels such as search engines, social media, email, and websites. It aims to connect businesses with their target audiences in the digital space.
+                      Digital marketing involves promoting products or services
+                      through online channels such as search engines, social
+                      media, email, and websites. It aims to connect businesses
+                      with their target audiences in the digital space.
                     </div>
                   </div>
                 </div>
@@ -293,7 +298,7 @@ const DigitalMarketing = () => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                     What services do digital marketing agencies offer?
+                      What services do digital marketing agencies offer?
                     </button>
                   </h2>
                   <div
@@ -303,7 +308,12 @@ const DigitalMarketing = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    Most digital marketing agencies provide services including web design, search engine optimization (SEO), email marketing, pay-per-click (PPC) advertising, and social media marketing. However, offerings can vary between agencies, so it's important to confirm specific services before engaging.
+                      Most digital marketing agencies provide services including
+                      web design, search engine optimization (SEO), email
+                      marketing, pay-per-click (PPC) advertising, and social
+                      media marketing. However, offerings can vary between
+                      agencies, so it's important to confirm specific services
+                      before engaging.
                     </div>
                   </div>
                 </div>
@@ -317,7 +327,8 @@ const DigitalMarketing = () => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                     How do I choose the right digital marketing agency for my business?
+                      How do I choose the right digital marketing agency for my
+                      business?
                     </button>
                   </h2>
                   <div
@@ -327,7 +338,11 @@ const DigitalMarketing = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    When selecting a digital marketing agency, consider their online reputation, demonstrated success with similar businesses, and alignment with your budget. Ensure they are responsive and trustworthy to establish a productive partnership.
+                      When selecting a digital marketing agency, consider their
+                      online reputation, demonstrated success with similar
+                      businesses, and alignment with your budget. Ensure they
+                      are responsive and trustworthy to establish a productive
+                      partnership.
                     </div>
                   </div>
                 </div>
@@ -341,7 +356,7 @@ const DigitalMarketing = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                     How much do digital marketing services cost?
+                      How much do digital marketing services cost?
                     </button>
                   </h2>
                   <div
@@ -351,7 +366,12 @@ const DigitalMarketing = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The cost of digital marketing services varies based on the type of service and project scope. For example, monthly costs can range from $500 to $5,000 for SEO, $300 to $5,000 for email marketing, and $250 to $10,000 for PPC management. Prices differ depending on the agency and specific business needs.
+                      The cost of digital marketing services varies based on the
+                      type of service and project scope. For example, monthly
+                      costs can range from $500 to $5,000 for SEO, $300 to
+                      $5,000 for email marketing, and $250 to $10,000 for PPC
+                      management. Prices differ depending on the agency and
+                      specific business needs.
                     </div>
                   </div>
                 </div>
@@ -365,7 +385,8 @@ const DigitalMarketing = () => {
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                     How long does it take to see results from digital marketing efforts?
+                      How long does it take to see results from digital
+                      marketing efforts?
                     </button>
                   </h2>
                   <div
@@ -375,7 +396,12 @@ const DigitalMarketing = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                    The timeline for seeing results varies depending on the strategies employed. SEO efforts may take several months to show significant improvements, while PPC advertising can yield immediate results. The exact time frame depends on your specific goals and the competitiveness of your industry.
+                      The timeline for seeing results varies depending on the
+                      strategies employed. SEO efforts may take several months
+                      to show significant improvements, while PPC advertising
+                      can yield immediate results. The exact time frame depends
+                      on your specific goals and the competitiveness of your
+                      industry.
                     </div>
                   </div>
                 </div>

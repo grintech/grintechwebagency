@@ -78,8 +78,8 @@ const Home = () => {
     <div className='app'>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Grintech Web Agency - Premium Website Development Services</title>
-        <meta name="description" content="Best mobile app and web development agency. With our top website developers you can use solutions that are specifically designed to meet your demands." />
+        <title>Top Web App Development Agency | Web & App Development Services</title>
+        <meta name="description" content="Grin Tech Web Agency – Top web app development agency offering expert web & app development services. Build powerful, scalable digital solutions with us!" />
         <link rel='canonical' href='https://grintechwebagency.com' />
       </Helmet>
 

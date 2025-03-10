@@ -43,10 +43,10 @@ const Blog = () => {
         <div>
 
             <Helmet>
-            <meta charSet="utf-8" />
-            <title>Insightful Blog | Latest Trends and Expert Advice </title>
-            <meta name="description" content="Explore our blog for the latest insights, trends, and expert advice on web development, mobile apps, SEO, and digital marketing strategies. We are here to help." />
-            <link rel='canonical' href='/blogs'  />
+                <meta charSet="utf-8" />
+                <title>Grintech Blog: Web Development and Design Insights</title>
+                <meta name="description" content="Explore the latest in web development and design with Grintech Blog. Get expert insights, tips, and trends to enhance your digital projects." />
+                <link rel='canonical' href='/blogs' />
             </Helmet>
 
 

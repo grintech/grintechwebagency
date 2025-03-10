@@ -36,7 +36,7 @@ const Contact = () => {
         setEmail('');
         setSelect('');
         setMessageError('');
-        form.current.reset(); // Reset the form fields
+        form.current.reset();
       } else {
         setMessage("Oops! Something went wrong. Please try again.");
       }
@@ -100,10 +100,10 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-            <meta charSet="utf-8" />
-            <title>Contact Grintech Web Agency - Let's Build Your Website Together</title>
-            <meta name="description" content="Get in touch with Grintech Web Agency for expert website development services. Our dedicated website developers are here to turn your vision into reality. " />
-            <link rel='canonical' href='/contact'  />
+        <meta charSet="utf-8" />
+        <title>Contact Grin Tech Web Agency | Get in Touch Today</title>
+        <meta name="description" content="Get in touch with Grin Tech Web Agency for expert web development, design, and digital solutions. Contact us today to bring your ideas to life!" />
+        <link rel='canonical' href='/contact' />
       </Helmet>
 
 
@@ -307,27 +307,27 @@ const Contact = () => {
 
               <div className='d-flex '>
                 <div> <h6 className='fw-bold'>Mail at:</h6>
-                <h6 className=''> Services: <Link to="mailto:aarti@grintechwebagency.com">info@grintechwebagency.com</Link></h6>
-                <h6> HR: <Link to="mailto:mailto:hr@grintechwebagency.com">: hr@grintechwebagency.com</Link></h6>
+                  <h6 className=''> Services: <Link to="mailto:aarti@grintechwebagency.com">info@grintechwebagency.com</Link></h6>
+                  <h6> HR: <Link to="mailto:mailto:hr@grintechwebagency.com">: hr@grintechwebagency.com</Link></h6>
 
                 </div>
-                </div>
-                
+              </div>
+
 
             </div>
             <div className='col-lg-4 col-md-4 col-sm-12 contact__items'>
 
               <p className=''><Icon icon="logos:whatsapp-icon" width="24" height="24" /> <Link to="https://web.whatsapp.com/7888752763">Whatsapp</Link></p>
-              <p><Link to="https://www.instagram.com/grintechwebagency/"  target="_blank">
-              <img className='insta_img' src='/img/insta.svg' alt='flag' />
-              Instagram</Link></p>
-              </div>
+              <p><Link to="https://www.instagram.com/grintechwebagency/" target="_blank">
+                <img className='insta_img' src='/img/insta.svg' alt='flag' />
+                Instagram</Link></p>
+            </div>
             <div className='col-lg-4 col-md-4 col-sm-12 contact__items'>
               <p className=''><img src='/img/usa.png' alt='flag' /> <a href="tel:(+1)833232-6622"> (+1) 833232-6622</a></p>
               <p><Icon icon="emojione-v1:flag-for-india" width="24" height="24" /> <a href="tel:+911724643298">(+91) 8264420387</a></p>
             </div>
 
-          
+
           </div>
         </div>
       </section>

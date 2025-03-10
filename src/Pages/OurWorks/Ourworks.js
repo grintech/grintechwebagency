@@ -28,7 +28,7 @@ const Ourworks = () => {
 
     const filteredData = (currElem) => {
         const updatedItems = data.filter((currItem) => {
-            return (currElem == "all") ? currItem : (currItem.category === currElem || currItem.category2 === currElem);
+            return (currElem === "all") ? currItem : (currItem.category === currElem || currItem.category2 === currElem);
         }
         )
         setSites(updatedItems)
@@ -98,8 +98,8 @@ const Ourworks = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Explore Our Projects | Grintech Web Agency Portfolio</title>
-                <meta name="description" content="Discover innovative web solutions in our portfolio. Explore Grintech Web Agency's best projects, showcasing creativity, expertise, and digital excellence." />
+                <title>Grintech Web Agency Portfolio: Showcasing Our Digital Solutions</title>
+                <meta name="description" content="Explore Grintech Web Agency's portfolio, showcasing our innovative digital solutions, web design, and development expertise for businesses worldwide." />
                 <link rel='canonical' href='/our-works' />
             </Helmet>
 

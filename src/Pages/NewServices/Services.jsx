@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import "./newService.css";
 import Footer from "../../Components/Footer/Footer";
 import { Helmet } from "react-helmet";
-import Client2 from "../Main-page/Client2";
-import Client3 from "../Main-page/Client3";
+// import Client2 from "../Main-page/Client2";
+// import Client3 from "../Main-page/Client3";
 import data from "../OurWorks/data";
 import data1 from "../OurWorks/data1";
-import { Icon } from "@iconify/react";
-import Testimonial from "../../Components/Reviews/Testimonial";
+// import { Icon } from "@iconify/react";
+// import Testimonial from "../../Components/Reviews/Testimonial";
 import ClientReview from "../../Components/Reviews/ClientReview";
 
 const Services = () => {
@@ -22,12 +22,10 @@ const Services = () => {
     <div className="new_servicepage">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>
-          Grintech Web Agency | Trusted Digital Solutions for Growth{" "}
-        </title>
+        <title>Custom Web Development Services | Expert Web Agency</title>
         <meta
           name="description"
-          content="Grintech Web Agency offers top-notch digital solutions to elevate your business. From web development to SEO, we help you grow online. Contact us today!"
+          content="Get expert custom web development services with Grin Tech Web Agency. We craft high-performing, tailored websites to elevate your brand and grow your business."
         />
         <link rel="canonical" href="/services" />
       </Helmet>
@@ -186,12 +184,11 @@ const Services = () => {
 
       {/* <section className="portfolio pb-5">
         <div className="container">
-          {" "}
           <h3>Our Portfolio</h3>
           <h6> Web Development</h6>
           <Client2 sites={sites} />
           <Link to="/our-works" style={{ color: "#014072" }}>
-            View all{" "}
+            View all
             <span className="new-get">
               <Icon icon="bi:arrow-right" />
             </span>
@@ -200,7 +197,7 @@ const Services = () => {
             <h6> Mobile Development</h6>
             <Client3 apps={apps} />
             <Link to="/our-works" style={{ color: "#014072" }}>
-              View all{" "}
+              View all
               <span className="new-get">
                 <Icon icon="bi:arrow-right" />
               </span>
@@ -211,13 +208,22 @@ const Services = () => {
 
       <div className="service_call_action mb-5">
         <h2>Get in touch with us!</h2>
-        <p>"We’d love to hear from you! Whether you have a question, need assistance, or want to discuss your next big project, our team is here to help. Reach out to us, and we’ll get back to you as soon as possible!"</p>
-        <div className="button"><Link to='/contact' className="start-link" ><button type="button" className="btn start-btn">Contact us</button></Link></div>
+        <p>
+          "We’d love to hear from you! Whether you have a question, need
+          assistance, or want to discuss your next big project, our team is here
+          to help. Reach out to us, and we’ll get back to you as soon as
+          possible!"
+        </p>
+        <div className="button">
+          <Link to="/contact" className="start-link">
+            <button type="button" className="btn start-btn">
+              Contact us
+            </button>
+          </Link>
+        </div>
       </div>
 
-     <ClientReview />
-
-   
+      <ClientReview />
 
       <Footer />
     </div>

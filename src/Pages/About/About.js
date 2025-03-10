@@ -46,8 +46,8 @@ export default function About() {
         <>
             <Helmet>
             <meta charSet="utf-8" />
-            <title>Your Trusted Development and Digital Marketing Partner</title>
-            <meta name="description" content="A solid foundation of 7+ years of experience. Grintech Web Agency has established itself as a leading provider of web development and digital marketing solutions." />
+            <title>Best Web App Development Agency Near You | Get Started</title>
+            <meta name="description" content="Boost your business with top-notch web app development from Grin Tech Web Agency. Custom, scalable, and high-performance solutions—get started today!" />
             <link rel='canonical' href='/about'  />
             </Helmet>
 
@@ -70,51 +70,51 @@ export default function About() {
             </section>
 
             <section className="laptop-hold">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5 col-md-12 col-sm-12">
-                            <div className="laptop-bg">
-                                <img className="img-fluid" src={laptop} alt="laptop hold" />
-                            </div>
+             <div className="container">
+                <div className="row">
+                    <div className="col-lg-5 col-md-12 col-sm-12">
+                        <div className="laptop-bg">
+                            <img className="img-fluid" src={laptop} alt="laptop hold" />
                         </div>
-                        <div className="col-lg-7 col-md-12 col-sm-12">
-                            <div className="row  pt-5">
-                                <h2 className='mt-4 '>Why Choose Us</h2>
-                                <p>At Grintech Web Agency, client satisfaction is at the core of everything we do. We are proud to maintain a remarkable 97% repeat customer rate, a testament to our dedication to delivering exceptional results and building long-term partnerships.</p>
-                            </div>
+                    </div>
+                    <div className="col-lg-7 col-md-12 col-sm-12">
+                        <div className="row  pt-5">
+                            <h2 className='mt-4 '>Why Choose Us</h2>
+                            <p>At Grintech Web Agency, client satisfaction is at the core of everything we do. We are proud to maintain a remarkable 97% repeat customer rate, a testament to our dedication to delivering exceptional results and building long-term partnerships.</p>
+                        </div>
 
-                            <div className="row pt-3">
-                                <div className="col-lg-4 col-md-4 main-frame">
-                                    <div className="icon">
-                                        <img className="img-fluid" src={mission} alt="mission" />
-                                    </div>
-                                    <div className="caption">
-                                        <h5 className="pt-4 pb-2 mb-0">Mission</h5>
-                                        <p>We are dedicated to helping businesses establish a strong online presence, engage with their target audience, and achieve their goals in the digital landscape.</p>
-                                    </div>
+                        <div className="row pt-3">
+                            <div className="col-lg-4 col-md-4 main-frame">
+                                <div className="icon">
+                                    <img className="img-fluid" src={mission} alt="mission" />
                                 </div>
-                                <div className="col-lg-4 col-md-4 main-frame">
-                                    <div className="icon">
-                                        <img className="img-fluid" src={vision} alt="vision" />
-                                    </div>
-                                    <div className="caption">
-                                        <h5 className="pt-4 pb-2 mb-0">Vision</h5>
-                                        <p>Our vision is to be a globally recognized, client-centric, and innovative web agency that delivers exceptional results, leads the industry, and positively impacts society.</p>
-                                    </div>
+                                <div className="caption">
+                                    <h5 className="pt-4 pb-2 mb-0">Mission</h5>
+                                    <p>We are dedicated to helping businesses establish a strong online presence, engage with their target audience, and achieve their goals in the digital landscape.</p>
                                 </div>
-                                <div className="col-lg-4 col-md-4 main-frame">
-                                    <div className="icon">
-                                        <img className="img-fluid" src={goal} alt="goal" />
-                                    </div>
-                                    <div className="caption">
-                                        <h5 className="pt-4 pb-2 mb-0">Goal</h5>
-                                        <p>We aim to establish itself as a trusted and leading provider of web development and digital marketing solutions while making a positive impact on our clients' success.</p>
-                                    </div>
+                            </div>
+                            <div className="col-lg-4 col-md-4 main-frame">
+                                <div className="icon">
+                                    <img className="img-fluid" src={vision} alt="vision" />
+                                </div>
+                                <div className="caption">
+                                    <h5 className="pt-4 pb-2 mb-0">Vision</h5>
+                                    <p>Our vision is to be a globally recognized, client-centric, and innovative web agency that delivers exceptional results, leads the industry, and positively impacts society.</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-4 main-frame">
+                                <div className="icon">
+                                    <img className="img-fluid" src={goal} alt="goal" />
+                                </div>
+                                <div className="caption">
+                                    <h5 className="pt-4 pb-2 mb-0">Goal</h5>
+                                    <p>We aim to establish itself as a trusted and leading provider of web development and digital marketing solutions while making a positive impact on our clients' success.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+             </div>
             </section>
 
             <section className="team-members py-5">
