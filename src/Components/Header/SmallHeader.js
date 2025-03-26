@@ -55,6 +55,9 @@ const SmallHeader = () => {
                                     <li className="nav-item">
                                     <Link onClick={handleLinkClick} to="/gallery" className="nav-link" >Gallery</Link>
                                     </li>
+                                    <li className="nav-item mt-2">
+                                    <Link onClick={handleLinkClick} to="/contact"> <button type="button" className="btn btn-contact">Contact Us</button></Link>
+                                    </li>
 
                                 </ul>
                             </div>

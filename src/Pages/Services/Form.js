@@ -1,8 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import data from "../../Components/country1.json";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Form = () => {
   const form = useRef();
+  const recaptchaRef = useRef(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
   const [message, setMessage] = useState("");
   const [userName, setUserName] = useState('');
   const [phone, setPhone] = useState('');
@@ -13,7 +20,13 @@ const Form = () => {
   const handleChange = async (event) => {
     event.preventDefault();
 
+    if (!captchaValue) {
+      setMessage("Please verify that you are not a robot!");
+      return;
+    }
+
     const formData = new FormData(form.current);
+    formData.append("g-recaptcha-response", captchaValue);
 
     try {
       const response = await fetch('https://app.grintechwebagency.com/wp-json/grintechReact/v1/form', {
@@ -22,7 +35,7 @@ const Form = () => {
       });
 
       if (response.ok) {
-        setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+        setMessage("Thanks for your query, Our Team will Contact you soon.");
         // Clear the form fields
         setUserName('');
         setPhone('');
@@ -30,6 +43,8 @@ const Form = () => {
         setSelect('');
         setMessageError('');
         form.current.reset(); // Reset the form
+        recaptchaRef.current.reset(); 
+
       } else {
         setMessage("Oops! Something went wrong. Please try again.");
       }
@@ -38,6 +53,18 @@ const Form = () => {
       setMessage("Oops! Something went wrong. Please try again.");
     }
   };
+
+    useEffect(() => {
+        if (message) {
+          const timer = setTimeout(() => {
+            setMessage("");
+          }, 4000); // Hide message after 4 seconds
+    
+          return () => clearTimeout(timer); // Cleanup timeout on component unmount
+        }
+      }, [message]);
+
+
 
   const handlePhoneChange = (e) => {
     const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
@@ -179,7 +206,7 @@ const Form = () => {
           </div>
 
           <div className='col-md-12 col-sm-12 mb-3'>
-            <label htmlFor="your-resume" className="form-label">Upload your file (optional)</label>
+            <label htmlFor="your-resume" className="form-label text-dark">Upload your file (optional)</label>
             <input 
               size="40" 
               className="wpcf7-form-control wpcf7-file form-control" 
@@ -206,7 +233,14 @@ const Form = () => {
           ></textarea>
         </div>
 
-        <div className='row'>
+         {/* Google reCAPTCHA */}
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // Replace with your site key
+        onChange={handleCaptchaChange}
+      />
+
+        <div className='row mt-2'>
           <div className='col-md-12 col-sm-12 col-lg-6'>
             <button 
               type="submit" 
@@ -229,7 +263,8 @@ const Form = () => {
             </a>
           </div>
         </div>
-        <p style={{ fontSize: "14px", color: "#014072" }}> {message} </p>
+        { message && <p className='mt-3' style={{ fontSize: "14px", color: "#014072" }}> {message} </p> }
+        
       </form>
     </div>
   );

@@ -6,6 +6,7 @@ import './singleblog.css';
 import { useParams } from 'react-router';
 import data from "../../Components/country.json";
 import { Helmet } from 'react-helmet';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Singleblog = () => {
   const [message, setMessage] = useState("");
@@ -13,6 +14,12 @@ const Singleblog = () => {
   const { slug } = useParams();
 
   const form = useRef();
+  const recaptchaRef = useRef(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
   const [userName, setUserName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -45,7 +52,14 @@ const Singleblog = () => {
   const handleChange = async (event) => {
     event.preventDefault();
 
+    if (!captchaValue) {
+      setMessage("Please verify that you are not a robot!");
+      return;
+    }
+
     const formData = new FormData(form.current);
+    formData.append("g-recaptcha-response", captchaValue);
+
     const json = Object.fromEntries(formData.entries());
 
     try {
@@ -55,7 +69,7 @@ const Singleblog = () => {
       });
 
       if (response.ok) {
-        setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+        setMessage("Thanks for your query, Our Team will Contact you soon.");
         // Clear the form fields
         setUserName('');
         setPhone('');
@@ -64,14 +78,30 @@ const Singleblog = () => {
         setMessageError('');
         
         form.current.reset(); // Reset the form
+        recaptchaRef.current.reset(); 
+
+        // Disappear message after 4 seconds
+        setTimeout(() => {
+          setMessage('');
+        }, 4000);
+
+
       } else {
         setMessage("Oops! Something went wrong. Please try again.");
+        setTimeout(() => {
+          setMessage('');
+        }, 4000);
       }
     } catch (error) {
       console.error('Error:', error);
       setMessage("Oops! Something went wrong. Please try again.");
+      setTimeout(() => {
+        setMessage('');
+      }, 4000);
     }
   };
+
+  
 
   const removeTags = (tag) => {
     return tag.replace("&#8211;", "-");
@@ -114,6 +144,7 @@ const Singleblog = () => {
             <div id='stickyForm' className='stickyformcontainer col-lg-5 col-md-12 col-sm-12'>
               <form ref={form} onSubmit={handleChange} id="stickyForm">
                 <div className='singleblog_form' >
+                  <h3 className='fw-bold mb-3' style={{color:"#014072"}}>Let's discuss your project</h3>
                   <div className='row'>
                     <div className="mb-3 col-md-12 col-sm-12">
                       <input
@@ -199,7 +230,7 @@ const Singleblog = () => {
                     </div>
 
                     <div className='col-md-12 col-sm-12 mb-3'>
-                      <label htmlFor="exampleInputEmail1" className="form-label"> Upload your file (optional)</label>
+                      <label htmlFor="exampleInputEmail1" className="form-label text-dark"> Upload your file (optional)</label>
                       <input
                         size="40"
                         className="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form-control"
@@ -236,7 +267,15 @@ const Singleblog = () => {
 
                   </div>
 
-                  <div className="mb-3 mt-4">
+                   {/* Google reCAPTCHA */}
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" 
+                    onChange={handleCaptchaChange}
+                  />
+
+
+                  <div className="mb-3 mt-3">
                     <div className='row'>
                       <div className='col-md-12 col-sm-12 col-lg-6'>
                         <button
@@ -260,7 +299,9 @@ const Singleblog = () => {
                         </a>
                       </div>
                     </div>
-                    <p style={{ fontSize: "14px", color: "#014072" }}>{message}</p>
+
+                    {message && <p className='mt-3' style={{ fontSize: "17px", fontWeight:600, color: "#014072" }}>{message}</p> }
+                   
                   </div>
                 </div>
               </form>

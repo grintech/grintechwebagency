@@ -106,7 +106,7 @@ const Ourworks = () => {
 
             <Header />
             <WhatsAppWidget phoneNumber="8264420387" message="Hello, how can I help you?" companyName="Grintech Web Agency" />
-            <section className="ourwork">
+            <section id='our_portfolio_hero' className="ourwork">
                 <div className="container">
                     <div className="row ourwork_main">
                         <div className="col-lg-6 ourwork_main_div1">

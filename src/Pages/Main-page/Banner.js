@@ -1,12 +1,19 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./home.css";
 import homebanner from "../../assets/images/new-banner.webp";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
 
 import data from "../../Components/country1.json";
+import ReCAPTCHA from "react-google-recaptcha";
 const Banner = () => {
   const form = useRef();
+  const recaptchaRef = useRef(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
   const [message, setMessage] = useState("");
   const [userName, setUserName] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,7 +24,14 @@ const Banner = () => {
   const handleChange = async (event) => {
     event.preventDefault();
 
+    if (!captchaValue) {
+      setMessage("Please verify that you are not a robot!");
+      return;
+    }
+
     const formData = new FormData(form.current);
+    formData.append("g-recaptcha-response", captchaValue);
+    
     const json = Object.fromEntries(formData.entries());
 
     try {
@@ -30,7 +44,7 @@ const Banner = () => {
       );
 
       if (response.ok) {
-        setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+        setMessage("Thanks for your query, Our Team will Contact you soon.");
         // Clear the form fields
         setUserName("");
         setPhone("");
@@ -38,19 +52,39 @@ const Banner = () => {
         setSelect("");
         setMessageError("");
         form.current.reset(); // Reset the form fields
+        recaptchaRef.current.reset();
+
+        // Disappear message after 4 seconds
+        setTimeout(() => {
+          setMessage('');
+      }, 4000);
+
       } else {
         setMessage("Oops! Something went wrong. Please try again.");
+        setTimeout(() => {
+          setMessage('');
+        }, 4000);
       }
     } catch (error) {
       console.error("Error:", error);
       setMessage("Oops! Something went wrong. Please try again.");
+      setTimeout(() => {
+        setMessage('');
+      }, 4000);
     }
   };
+  
+   useEffect(() => {
+      if (message) {
+        const timer = setTimeout(() => {
+          setMessage("");
+        }, 4000); // Hide message after 4 seconds
+  
+        return () => clearTimeout(timer); // Cleanup timeout on component unmount
+      }
+    }, [message]);
 
-  // const handlePhoneChange = (e) => {
-  //   const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-  //   setPhone(sanitizedValue);
-  // };
+  
   const handlePhoneChange = (e) => {
     const sanitizedValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
     if (sanitizedValue.length <= 11) {
@@ -87,10 +121,6 @@ const Banner = () => {
   const handleInputemail = (event) => {
     event.target.setCustomValidity("");
   };
-
-  // const handleInvalidmessage = (event) => {
-  //   event.target.setCustomValidity('Message cannot be left blank');
-  // };
 
   const handleInputmessage = (e) => {
     const value = e.target.value;
@@ -306,7 +336,14 @@ const Banner = () => {
                     ></textarea>
                   </div>
 
-                  <div className="row">
+                   {/* Google reCAPTCHA */}
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // Replace with your site key
+                    onChange={handleCaptchaChange}
+                  />
+
+                  <div className="row mt-2">
                     <div className="col-md-12 col-sm-12 col-lg-6">
                       <button
                         type="submit"
@@ -317,10 +354,8 @@ const Banner = () => {
                       </button>
                     </div>
                   </div>
-                  <p className="mt-2" style={{ fontSize: "14px", color: "rgb(23 122 14)" }}>
-                    
-                    {message}
-                  </p>
+                  {message &&  <p className="mt-2" style={{ fontSize: "14px", color: "rgb(23 122 14)" }}> {message} </p> }
+                 
                 </form>
               </div>
             </div>

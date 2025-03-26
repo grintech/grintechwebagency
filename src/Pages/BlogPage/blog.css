@@ -78,6 +78,7 @@ justify-content: center;
     font-size: 14px;
     display: -webkit-inline-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     clear: both;
@@ -86,6 +87,7 @@ justify-content: center;
   .post-box h5{
     display: -webkit-inline-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     clear: both;
@@ -174,7 +176,16 @@ margin-bottom: 80px;
         .blog_post h6{
           display: -webkit-inline-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     clear: both;
+        }
+
+        @media only screen and (max-width:767px){
+          .blog_main_div1 h1 {font-size: 35px;}
+        }
+
+        @media only screen and (max-width:425px){
+          .hover_form {padding: 35px 30px;}
         }

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Sidebar from '../../Components/Sideicons/Sidebar';
@@ -7,9 +7,17 @@ import { Link } from 'react-router-dom';
 import data from "../../Components/country.json";
 import { Icon } from '@iconify/react';
 import { Helmet } from 'react-helmet';
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
   const form = useRef();
+  const recaptchaRef = useRef(null);
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
   const [message, setMessage] = useState("");
   const [userName, setUserName] = useState('');
   const [phone, setPhone] = useState('');
@@ -20,7 +28,13 @@ const Contact = () => {
   const handleChange = async (event) => {
     event.preventDefault();
 
+    if (!captchaValue) {
+      setMessage("Please verify that you are not a robot!");
+      return;
+    }
+
     const formData = new FormData(form.current);
+    formData.append("g-recaptcha-response", captchaValue);
 
     try {
       const response = await fetch('https://app.grintechwebagency.com/wp-json/grintechReact/v1/form', {
@@ -29,7 +43,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+        setMessage("Thanks for your query, Our Team will Contact you soon!.");
         // Clear the form fields
         setUserName('');
         setPhone('');
@@ -37,6 +51,7 @@ const Contact = () => {
         setSelect('');
         setMessageError('');
         form.current.reset();
+        recaptchaRef.current.reset(); 
       } else {
         setMessage("Oops! Something went wrong. Please try again.");
       }
@@ -45,6 +60,16 @@ const Contact = () => {
       setMessage("Oops! Something went wrong. Please try again.");
     }
   };
+
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage("");
+      }, 4000); 
+
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   const handlePhoneChange = (e) => {
     const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
@@ -83,10 +108,7 @@ const Contact = () => {
     event.target.setCustomValidity('');
   };
 
-  // const handleInvalidmessage = (event) => {
-  //   event.target.setCustomValidity('Message cannot be left blank');
-  // };
-
+  
   const handleInputmessage = (e) => {
     const value = e.target.value;
     if (value.length >= 20) {
@@ -101,14 +123,15 @@ const Contact = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Contact Grin Tech Web Agency | Get in Touch Today</title>
-        <meta name="description" content="Get in touch with Grin Tech Web Agency for expert web development, design, and digital solutions. Contact us today to bring your ideas to life!" />
+        <title>Contact GrinTech Web Agency | Get in Touch Today</title>
+        <meta name="description" content="Get in touch with GrinTech Web Agency for expert web development, design, and digital solutions. Contact us today to bring your ideas to life!" />
         <link rel='canonical' href='/contact' />
       </Helmet>
 
 
       <Header />
       <Sidebar />
+      <WhatsAppWidget phoneNumber="8264420387" message="Hello, how can I help you?" companyName="Grintech Web Agency" />
       <section>
         <div className='container contact__back'>
           <div className='row'>
@@ -140,7 +163,7 @@ const Contact = () => {
                         placeholder="Last name"
                       />
                     </div>
-                    <label htmlFor="exampleInputEmail1" className="form-label">Phone <span className='star'>*</span></label>
+                    <label htmlFor="exampleInputEmail1" className="form-label text-dark">Phone <span className='star'>*</span></label>
                     <div className="phone-input-container mb-3">
                       <select
                         id="country-code"
@@ -216,7 +239,7 @@ const Contact = () => {
                   </select>
 
                   <div className='col-md-12 col-sm-12 mb-3'>
-                    <label htmlFor="exampleInputEmail1" className="form-label">Upload your file (optional) </label>
+                    <label htmlFor="exampleInputEmail1" className="form-label text-dark">Upload your file (optional) </label>
                     <input size="40" className="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form-control" accept=".pdf,.txt,.doc,.docx" aria-required="true" aria-invalid="false" type="file" name="your-resume" />
                   </div>
 
@@ -233,14 +256,23 @@ const Contact = () => {
                       required
                     ></textarea>
                   </div>
+                    
+                    {/* Google reCAPTCHA */}
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // Replace with your site key
+                    onChange={handleCaptchaChange}
+                  />
+
                   <button
                     type="submit"
-                    className="btn contact__button"
+                    className="btn contact__button mt-3"
                     style={{ backgroundColor: "#177a0e", color: "white" }}
                   >
                     Submit
                   </button>
-                  <p style={{ fontSize: "14px", color: "#014072" }}> {message} </p>
+                  {message &&
+                  <p className='text-center' style={{ fontSize: "18px", fontWeight:600, color: "#014072" }}> {message} </p> }
                 </form>
               </div>
             </div>
@@ -254,14 +286,14 @@ const Contact = () => {
                 <p>
                   <Link className='contact__sidebar_Link' to="mailto:info@grintechwebagency.com">info@grintechwebagency.com</Link>
                 </p>
-                <h4>
+                {/* <h4>
                   For Reseller Partner
                 </h4>
                 <p>
                   <Link to="mailto:info@grintechwebagency.com">
                     info@grintechwebagency.com
                   </Link>
-                </p>
+                </p> */}
                 <h4>
                   HR Queries
                 </h4>
@@ -323,7 +355,7 @@ const Contact = () => {
                 Instagram</Link></p>
             </div>
             <div className='col-lg-4 col-md-4 col-sm-12 contact__items'>
-              <p className=''><img src='/img/usa.png' alt='flag' /> <a href="tel:(+1)833232-6622"> (+1) 833232-6622</a></p>
+              {/* <p className=''><img src='/img/usa.png' alt='flag' /> <a href="tel:(+1)833232-6622"> (+1) 833232-6622</a></p> */}
               <p><Icon icon="emojione-v1:flag-for-india" width="24" height="24" /> <a href="tel:+911724643298">(+91) 8264420387</a></p>
             </div>
 

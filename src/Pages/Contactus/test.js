@@ -41,7 +41,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+        setMessage("Thanks for your query, Our Team will Contact you soon.");
         // Clear the form fields
         setUserName('');
         setPhone('');

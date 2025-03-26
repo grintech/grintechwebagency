@@ -1,12 +1,19 @@
 import {React , useState, useRef} from "react";
 import { useSidebar } from "../../context/SidebarContext";
 import data from "../../Components/country1.json";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const SidebarContact = () => {
   const { isOpen, setIsOpen } = useSidebar(); 
 
     const form = useRef();
+     const recaptchaRef = useRef(null);
+      const [captchaValue, setCaptchaValue] = useState(null);
+      const handleCaptchaChange = (value) => {
+        setCaptchaValue(value);
+      };
+
     const [message, setMessage] = useState("");
     const [userName, setUserName] = useState('');
     const [phone, setPhone] = useState('');
@@ -16,8 +23,14 @@ const SidebarContact = () => {
   
     const handleChange = async (event) => {
       event.preventDefault();
+
+      if (!captchaValue) {
+        setMessage("Please verify that you are not a robot!");
+        return;
+      }
   
       const formData = new FormData(form.current);
+      formData.append("g-recaptcha-response", captchaValue);
   
       try {
         const response = await fetch('https://app.grintechwebagency.com/wp-json/grintechReact/v1/form', {
@@ -26,7 +39,7 @@ const SidebarContact = () => {
         });
   
         if (response.ok) {
-          setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+          setMessage("Thanks for your query, Our Team will Contact you soon.");
           // Clear the form fields
           setUserName('');
           setPhone('');
@@ -34,25 +47,26 @@ const SidebarContact = () => {
           setSelect('');
           setMessageError('');
           form.current.reset(); // Reset the form
+          recaptchaRef.current.reset(); 
 
-          // Disappear message after 3 seconds
+          // Disappear message after 4 seconds
             setTimeout(() => {
                 setMessage('');
-            }, 3000);
+            }, 4000);
 
 
         } else {
           setMessage("Oops! Something went wrong. Please try again.");
           setTimeout(() => {
             setMessage('');
-          }, 3000);
+          }, 4000);
         }
       } catch (error) {
         console.error('Error:', error);
         setMessage("Oops! Something went wrong. Please try again.");
         setTimeout(() => {
             setMessage('');
-          }, 3000);
+          }, 4000);
       }
     };
   
@@ -93,9 +107,7 @@ const SidebarContact = () => {
       event.target.setCustomValidity('');
     };
   
-    // const handleInvalidmessage = (event) => {
-    //   event.target.setCustomValidity('Message cannot be left blank');
-    // };
+ 
   
     const handleInputmessage = (e) => {
       const value = e.target.value;
@@ -201,7 +213,7 @@ const SidebarContact = () => {
           </div>
 
           <div className='col-md-12 col-sm-12 mb-3'>
-            <label htmlFor="your-resume" className="form-label text-muted">Upload your file (optional)</label>
+            <label htmlFor="your-resume" className="form-label text-white">Upload your file (optional)</label>
             <input 
               size="40" 
               className="wpcf7-form-control wpcf7-file form-control" 
@@ -228,12 +240,19 @@ const SidebarContact = () => {
           ></textarea>
         </div>
 
-        <div className='row'>
+         {/* Google reCAPTCHA */}
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // Replace with your site key
+        onChange={handleCaptchaChange}
+      />
+
+        <div className='row mt-2'>
           <div className='col-md-12 col-sm-12 col-lg-6'>
             <button 
               type="submit" 
               className="btn form_button" 
-              style={{ backgroundColor: "#177a0e", color: "white" }}
+              style={{ backgroundColor: "#014072", color: "white" }}
             >
               Get a quote
             </button>
@@ -244,14 +263,14 @@ const SidebarContact = () => {
               href='https://www.upwork.com/freelancers/~01bb68f80af91ff72f' 
               target='_blank' 
               className="btn form_button" 
-              style={{ backgroundColor: "#177a0e", color: "white" }} 
+              style={{ backgroundColor: "#014072", color: "white" }} 
               rel="noreferrer"
             >
               Hire us on upwork
             </a>
           </div>
         </div>
-        <p style={{ fontSize: "14px", color: "#014072" }} className="text-center"> {message} </p>
+        <p style={{ fontSize: "17px", fontWeight:600, color: "#fff" }} className="text-center mt-3"> {message} </p>
       </form>
 
     </div>

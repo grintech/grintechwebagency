@@ -7,11 +7,18 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 
 import data from "../../Components/country1.json";
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 const Footer = () => {
 
     const form = useRef();
+    const recaptchaRef = useRef(null);
+    const [captchaValue, setCaptchaValue] = useState(null);
+    const handleCaptchaChange = (value) => {
+      setCaptchaValue(value);
+    };
+
     const [message, setMessage] = useState("");
     const [userName, setUserName] = useState("");
     const [phone, setPhone] = useState("");
@@ -21,8 +28,15 @@ const Footer = () => {
   
     const handleChange = async (event) => {
       event.preventDefault();
+
+      if (!captchaValue) {
+        setMessage("Please verify that you are not a robot!");
+        return;
+      }
   
       const formData = new FormData(form.current);
+      formData.append("g-recaptcha-response", captchaValue);
+
       const json = Object.fromEntries(formData.entries());
   
       try {
@@ -35,7 +49,7 @@ const Footer = () => {
         );
   
         if (response.ok) {
-          setMessage("Yayy!! Message Sent, Our Team will Contact you soon.");
+          setMessage("Thanks for your query, Our Team will Contact you soon.");
           // Clear the form fields
           setUserName("");
           setPhone("");
@@ -43,6 +57,7 @@ const Footer = () => {
           setSelect("");
           setMessageError("");
           form.current.reset(); // Reset the form fields
+          recaptchaRef.current.reset(); // Reset recaptcha
         } else {
           setMessage("Oops! Something went wrong. Please try again.");
         }
@@ -51,6 +66,16 @@ const Footer = () => {
         setMessage("Oops! Something went wrong. Please try again.");
       }
     };
+
+    useEffect(() => {
+      if (message) {
+        const timer = setTimeout(() => {
+          setMessage("");
+        }, 4000); 
+  
+        return () => clearTimeout(timer); 
+      }
+    }, [message]);
   
     // const handlePhoneChange = (e) => {
     //   const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
@@ -176,7 +201,7 @@ const Footer = () => {
                             <li className="mb-2"><Link to="/our-works">Our Works</Link></li>
                             <li className="mb-2"><Link to="/gallery">Gallery</Link></li>
                             <li className="mb-2"><Link to="/blogs">Blogs</Link></li>
-                            <li className="mb-2"><Link to="/blogs">Contact Us</Link></li>
+                            <li className="mb-2"><Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -299,7 +324,13 @@ const Footer = () => {
                     ></textarea>
                   </div>
 
-                  <div className="row">
+                  <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // site key
+                  onChange={handleCaptchaChange}
+                />
+
+                  <div className="row mt-2">
                     <div className="col-md-12 col-sm-12 col-lg-6">
                       <button
                         type="submit"
@@ -310,10 +341,8 @@ const Footer = () => {
                       </button>
                     </div>
                   </div>
-                  <p style={{ fontSize: "14px", color: "#fff" }}>
-                    
-                    {message}
-                  </p>
+                  {message &&  <p style={{ fontSize: "14px", color: "#fff" }}> {message}</p>  }
+                  
                 </form>
                 </div>
                 <div className="col-lg-3 col-sm-6 order-2 text-start">
@@ -326,7 +355,7 @@ const Footer = () => {
                 </div>
                 <div className="mb-3 d-flex align-items-center">
                     <span className="ficon"><Icon icon="material-symbols:phone-in-talk" width="30" /></span>
-                    <span><Link to="tel:+91 - 9876543210">+1 (833) 232-6622</Link></span>
+                    <span><a href="tel:+919418960274">+91 9418960274</a></span>
                 </div>
                 <div className="mb-3 d-flex align-items-center">
                     <span className="ficon"><Icon icon="ph:envelope-simple" width="30" /></span>
@@ -353,7 +382,7 @@ const Footer = () => {
       <section className="footer-bottom">
         <div className="container">
             <div className="row">
-                <p>© GRINTECH WEB AGENCY 2024. ALL RIGHTS RESERVED.</p>
+                <p>© GRINTECH WEB AGENCY 2025. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
       </section>
