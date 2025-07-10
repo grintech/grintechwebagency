@@ -219,4 +219,6 @@ ul.img-section li {
     left: 40px;
     top: 35px;
   }
+  .services-home p { font-size: 15px;}
+  .services-home h2 { font-size: 30px;}
 }

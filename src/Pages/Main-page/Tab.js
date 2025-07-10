@@ -121,7 +121,7 @@ const Tab = () => {
                 <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                   <div className="row align-items-center">
                     <div className="col-md-5 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         <h2>Web Designing</h2>
                         {/* <p>The agency specializes in designing and developing attractive and user-friendly websites. They can create custom website designs tailored to your specific needs and preferences.</p> */}
                         <p>Grintech Web Agency offers top-tier web design services, crafting visually stunning, user-friendly, and responsive websites tailored to your business needs. Our expert team combines creativity with cutting-edge technology to deliver engaging digital experiences that drive results. Whether you need a brand-new website or a redesign, we ensure seamless functionality and modern aesthetics to elevate your online presence. </p>
@@ -152,7 +152,7 @@ const Tab = () => {
                 <div className="tab-pane fade" id="pills-graphic" role="tabpanel" aria-labelledby="pills-graphic-tab">
                   {/* <div className="row">
                     <div className="col-md-5 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         <h2>Graphic Designing</h2>
                         <p>Grintech Web Agency can help you with creating visually appealing designs for various purposes, such as logos, banners, brochures, and other marketing materials.</p>
                         <div className="new-tab-button "><Link to="/our-services-photoshop">Explore <span className="new-get"><Icon icon="bi:arrow-right" /></span></Link></div>
@@ -173,7 +173,7 @@ const Tab = () => {
 
                    <div className="row align-items-center">
                     <div className="col-md-6 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         <h2>UI /UX</h2>
                         {/* <ul>
                           <li><b>User Research and Analysis:</b> Understanding user needs and behaviors to inform design decisions.</li>
@@ -208,7 +208,7 @@ const Tab = () => {
                 <div className="tab-pane fade" id="pills-Shopify" role="tabpanel" aria-labelledby="pills-Shopify-tab">
                   <div className="row align-items-center">
                     <div className="col-md-6 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         {/* <h2>CMS</h2> */}
                         {/* <p>CMS stands for Content Management System. Grintech Web Agency can assist you in implementing a CMS for your website, enabling you to easily manage and update your site's content without requiring technical expertise.</p> */}
                         <h2>Web Development</h2>
@@ -246,7 +246,7 @@ const Tab = () => {
                 <div className="tab-pane fade" id="pills-Magento" role="tabpanel" aria-labelledby="pills-Magento-tab">
                   <div className="row align-items-center">
                     <div className="col-md-6 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         {/* <h2>PHP</h2> */}
                         {/* <p>PHP is a popular programming language used for web development. Grintech Web Agency has expertise in PHP development and can create dynamic and interactive websites using this language.</p> */}
                         <h2>Mobile Application Development</h2>
@@ -290,7 +290,7 @@ const Tab = () => {
                 <div className="tab-pane fade" id="pills-PHP" role="tabpanel" aria-labelledby="pills-PHP-tab">
                   <div className="row align-items-center">
                     <div className="col-md-6 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         <h2>Digital Marketing</h2>
                       
                         {/* <ul>
@@ -328,7 +328,7 @@ const Tab = () => {
                 <div className="tab-pane fade" id="pills-Joomla" role="tabpanel" aria-labelledby="pills-Joomla-tab">
                   <div className="row align-items-center">
                     <div className="col-md-5 col-sm-12">
-                      <div className="tab-content-box">
+                      <div className="tab-content-box px-2">
                         <h2>Server</h2>
                         {/* <p>The server category likely includes additional services provided by Grintech Web Agency. These could vary depending on specific client requirements and may include services like website maintenance, e-commerce development, database management and more.</p> */}
                         <p>

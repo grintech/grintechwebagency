@@ -840,6 +840,25 @@ div#client2_image img {
   color: #014072;
 }
 
+a[href*="elfsight.com/google-reviews-widget"] {
+  display: none !important;
+}
+
+.google_reviews{position: relative;}
+
+.google_reviews::after {
+    content: "";
+    background-color: #ffffff;
+    width: 65%;
+    height: 40px;
+    position: relative;
+    left: 18%;
+    top: -45px;
+    z-index: 9 !important;
+    display: block;
+}
+
+
 @media only screen and (min-width: 1400px) {
   .call-to-action h3 {
     font-size: 25px !important;

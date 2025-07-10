@@ -166,7 +166,7 @@ const Banner = () => {
           </div>
         </div> */}
         <div className="row align-items-center">
-          <div className=" col-lg-7 mx-auto">
+          <div className=" col-lg-7 col-11 mx-auto">
             <div className="banner-content container-fluid">
               <h1>
                 We're not just building

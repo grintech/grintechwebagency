@@ -15,6 +15,8 @@ import Form from "../Services/Form"
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
 import { Helmet } from 'react-helmet';
+import TeamSection from './TeamSection.js';
+import { Link } from 'react-router-dom';
 
 export default function About() {
 
@@ -55,36 +57,41 @@ export default function About() {
             <Header />
             <WhatsAppWidget phoneNumber="8264420387" message="Hello, how can I help you?" companyName="Grintech Web Agency" />
             <Sideicons />
-            <section className="about">
-                <div className="container">
-                    <div className="row about_main">
+            <section className="pt-5 mt-3 about_banner">
+                <div className="container d-flex flex-column justify-content-center align-items-center">
+                    {/* <div className="row about_main py-4">
                         <div className="col-lg-6 col-md-12 col-sm-12 about_main_div1">
                             <h1>Your Trusted Development and Digital Marketing Partner</h1>
                             <p>With a solid foundation of 7+ years of experience, Grintech Web Agency has established itself as a leading provider of web development and digital marketing solutions. As a global agency, we are proud to have a presence in 5+ countries, serving clients from various industries and backgrounds.</p>
                         </div>
                         <div className="col-lg-6 col-md-12 col-sm-12">
-                            <Form />
+                            <Form /> 
                         </div>
-                    </div>
+                    </div> */}
+                    {/* <h1>About us</h1> */}
                 </div>
+                    {/* <video className='w-100' autoPlay loop muted src="/videos/Aboutus.mp4"></video> */}
+                    <img  src="/img/About.png" className='w-100 d-md-block d-none' alt="" />
+                    <img  src="/img/Aboutmobile.png" className='w-100 d-block d-md-none' alt="" />
+                    {/* <img  src="/team/all_team1.jpg" className='w-100 ' alt="" /> */}
             </section>
 
-            <section className="laptop-hold">
+            <section className="laptop-hold mt-0">
              <div className="container">
-                <div className="row">
-                    <div className="col-lg-5 col-md-12 col-sm-12">
+                <div className="row px-3">
+                    {/* <div className="col-lg-5 col-md-12 col-sm-12">
                         <div className="laptop-bg">
                             <img className="img-fluid" src={laptop} alt="laptop hold" />
                         </div>
-                    </div>
-                    <div className="col-lg-7 col-md-12 col-sm-12">
-                        <div className="row  pt-5">
+                    </div> */}
+                    <div className="col-12 col-sm-12">
+                        <div className="row ">
                             <h2 className='mt-4 '>Why Choose Us</h2>
                             <p>At Grintech Web Agency, client satisfaction is at the core of everything we do. We are proud to maintain a remarkable 97% repeat customer rate, a testament to our dedication to delivering exceptional results and building long-term partnerships.</p>
                         </div>
 
-                        <div className="row pt-3">
-                            <div className="col-lg-4 col-md-4 main-frame">
+                        <div className="row pt-3 gx-4">
+                            <div className="col-lg-4  col-md-4 main-frame">
                                 <div className="icon">
                                     <img className="img-fluid" src={mission} alt="mission" />
                                 </div>
@@ -93,7 +100,7 @@ export default function About() {
                                     <p>We are dedicated to helping businesses establish a strong online presence, engage with their target audience, and achieve their goals in the digital landscape.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 main-frame">
+                            <div className="col-lg-4  col-md-4 main-frame">
                                 <div className="icon">
                                     <img className="img-fluid" src={vision} alt="vision" />
                                 </div>
@@ -102,7 +109,7 @@ export default function About() {
                                     <p>Our vision is to be a globally recognized, client-centric, and innovative web agency that delivers exceptional results, leads the industry, and positively impacts society.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 main-frame">
+                            <div className="col-lg-4  col-md-4 main-frame">
                                 <div className="icon">
                                     <img className="img-fluid" src={goal} alt="goal" />
                                 </div>
@@ -117,7 +124,7 @@ export default function About() {
              </div>
             </section>
 
-            <section className="team-members py-5">
+            {/* <section className="team-members py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 mb-4">
@@ -142,9 +149,11 @@ export default function About() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <section className='owner-info py-5'>
+            <TeamSection />
+
+            {/* <section className='owner-info py-5'>
                 <div className='container'>
                     <div className='row mt-3'>
                         <div className='col-lg-8 col-md-12 mb-4 mb-lg-0' style={{ position: "relative" }}>
@@ -175,16 +184,47 @@ export default function About() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+            <div className="owner_section py-5">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-6 pe-md-5 mb-4 mb-md-0">
+                            <img src={Image} className='owner-img rounded-pill' alt="Rajesh Bhardwaj"></img>
+                        </div>
+                        <div className="col-md-6">
+                            <h3 className='mb-3'><b> Meet Rajesh Kumar Bhardwaj</b></h3>
+                            <h5 className='mb-3'><b>Founder, Grintech Web Agency</b></h5>
+                            <div className=''>
+                                <div>
+                                    <h4></h4>
+                                    <div cite="https://www.huxley.net/bnw/four.html">
+                                  <p> <sup> <i className="fa-solid fa-quote-left"></i></sup> <span className='text_green'><b>Welcome to the Grintech Family.</b></span> I’m <b>Rajesh Kumar Bhardwaj,</b> the proud founder of Grintech Web Agency. Our mission is to provide exceptional web solutions and digital solutions tailored to empower businesses of all sizes. With over 4 years of expertise in web technology, we have built a reputation for delivering reliable, scalable, and secure hosting services that help our clients thrive in the digital landscape.</p>
+                                  
+                                   <p> At Grintech, we believe that every business deserves a strong online presence. That’s why we’re committed to offering innovative solutions and unmatched support to ensure your success. Whether you’re launching your first website or managing a growing enterprise, we are here to make your journey seamless and productive. 
+                                    </p>
+                                    <p>Thank you for trusting Grintech Web Agency as your digital partner. Together, let’s unlock the full potential of the web!  <sup><i className="fa-solid fa-quote-right"></i></sup></p>
+                                    {/* <b> Warm regards,</b> <br /> 
+                                    <b>Rajesh Kumar Bhardwaj</b> <br />
+                                    <b>Founder, Grintech Web Agency </b>  */}
+ 
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section className='client'>
                 <div className='container'>
                     <h3>Our Global Clients</h3>
                     <h6> Business Expansion Scale</h6>
                     <div className='row client2'>
-                        {sites.slice(0, -4).map((item, index) => (
+                        {/* {sites.slice(0, -4).map((item, index) => ( */}
+                        {sites.map((item, index) => (
                             <div id="client2_image" className='col-6 col-md-3 col-lg-2 mt-4 mb-4' key={index}>
-                                <img src={item.logo} className='img-fluid' alt={item.name}></img>
+                                <Link target="_blank" to={item.Link} ><img src={item.logo} className='img-fluid' alt={item.name}></img></Link>
                             </div>
                         ))}
                     </div>

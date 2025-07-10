@@ -18,13 +18,24 @@
   .laptop-hold p{font-size: 16px;}
   .icon{border: 1px solid #0078D6; width: 60px; height: 60px; border-radius: 50%; text-align: center; line-height: 55px; position: relative;z-index:1; transition:all linear 0.3s;} 
   .icon::before{content: ''; position: absolute; width: 60px; height: 60px; border-radius: 50%; background-color: #c8d7e2; top: 5px; left:9px;z-index: -1; transition:all linear 0.3s;}
-  .main-frame{border-right:1px solid #E1E1E1;}
+  .main-frame{
+    border-right:1px solid #E1E1E1;
+  transition: all .3s ease; padding: 20px;}
   .main-frame:last-child{border-right:0;}
   .main-frame:hover .icon::before{
     top:0; 
     left:0;
   }
   .main-frame .caption h5{font-size: 18px; font-weight: 700; line-height: 24px;}
+
+
+  .main-frame:hover{
+    background: #0078d6;
+    color: #fff;
+    
+    border-radius: 6px;
+    transition: all .3s ease;
+    }
 
   /* .btn-bt{
     
@@ -152,13 +163,57 @@ blockquote {
 
 .client #client2_image img{
   width: 150px !important;
+  transition: all .3s ease;
 }
+.client #client2_image img:hover{
+ transform: scale(1.3);
+ transition: all .3s ease;
+}
+
+.owner_section p{font-size: 17px;}
+
+/* .about_banner{
+  background: url(../../../public/team/all_team1.jpg);
+  height: 480px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.about_banner::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.6);
+  position: absolute;
+}
+
+.about_banner h1{color: #fff; z-index: 1; font-size: 3rem;}
+
+
+@media only screen and (min-width:1400px){
+  .about_banner{height: 550px !important;}
+}
+
+@media only screen and (min-width:1920px){
+  .about_banner{height: 570px !important;}
+}
+@media only screen and (min-width:2560px){
+  .about_banner{height: 650px !important;}
+} */
+
 
 
 @media only screen and (max-width:992px){
   .about_main_div1 h1 {
     font-size: 40px;
   }
+  .owner_section p{font-size: 15px; margin-bottom: 10px;}
 }
 
 @media only screen and (max-width:767px){
@@ -188,4 +243,9 @@ align-items: center;
     margin-top: 50px;
     margin: 40px 0px 0 0;
 }
+}
+
+@media screen and (max-width:500px) {
+  .owner_section h3{ font-size: 22px !important;}
+  .owner_section h5{ font-size: 17px !important;}
 }

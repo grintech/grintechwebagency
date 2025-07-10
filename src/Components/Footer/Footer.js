@@ -363,6 +363,7 @@ const Footer = () => {
                 </div>
                 <div >
                     <ul className="f-links ">
+                        {/* <li><Link to="https://www.facebook.com/grintechwebagency1/" target="_blank"><Icon icon="typcn:social-facebook" width="25" /></Link></li> */}
                         <li><Link to="https://www.facebook.com/grintechwebagency1/" target="_blank"><Icon icon="typcn:social-facebook" width="25" /></Link></li>
                         <li><Link to="https://in.linkedin.com/company/grin-tech-web-agency" target="_blank"><Icon icon="typcn:social-linkedin" width="25" /></Link></li>
                         <li><Link to="https://www.instagram.com/grintechwebagency/" target="_blank"><Icon icon="typcn:social-instagram" width="25" /></Link></li>

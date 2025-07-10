@@ -44,6 +44,7 @@ import SmallHeader from '../../Components/Header/SmallHeader.js';
 import ClientReview from '../../Components/Reviews/ClientReview.js';
 import Testimonial from '../../Components/Reviews/Testimonial.js';
 import { Helmet } from 'react-helmet';
+import GoogleReviewWidget from '../../Components/GoogleReviewWidget.js';
 
 const Home = () => {
 
@@ -525,9 +526,10 @@ const Home = () => {
           <h6>Business Expansion Scale</h6>
           <div className='row client2'>
             {
-              sites.slice(0, -4).map((item, index) => (
+              // sites.slice(0, -4).map((item, index) => (
+              sites.map((item, index) => (
                 <div id="client2_image" className='col-md-2 col-sm-4  mt-4 mb-4 ' key={index}>
-                  <img src={item.logo} className='img-fluid'></img>
+                 <Link target='_blank' to={item.Link}> <img src={item.logo} className='img-fluid'></img></Link>
                 </div>
               )
               )
@@ -536,6 +538,13 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="google_reviews pt-5 ">
+         <div className="container mt-4">
+            <GoogleReviewWidget />
+          </div>
+      </div>
+
 
       <Homeblog />
 
