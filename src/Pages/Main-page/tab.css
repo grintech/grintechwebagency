@@ -28,7 +28,7 @@ ul#pills-tab button {
   border-radius: 10px;
   color: #1b1b1b;
   position: relative;
-  width: 170px;
+  width: 165px;
   height: 68px;
 }
 ul#pills-tab button h6 {
@@ -143,7 +143,7 @@ ul.img-section li {
     border-radius: 10px;
     color: #1b1b1b;
     position: relative;
-    width: 150px;
+    width: 148px;
     height: 60px;
     margin-top: 0px;
   }
@@ -159,6 +159,7 @@ ul.img-section li {
     top: 40px;
   }
 }
+ ul#pills-tab li.nav-item {margin-bottom: 30px;}
 
 @media only screen and (max-width: 991px) {
   ul#pills-tab button {
