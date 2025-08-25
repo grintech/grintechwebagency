@@ -350,7 +350,8 @@ const Footer = () => {
                 <div className=" address-bar pt-0">
                 <div className="mb-3 d-flex align-items-center">
                     <span className="ficon"><Icon icon="material-symbols:location-on-outline-rounded" width="30" /></span>
-                    <span>905/B1, 9th Floor, Bestech Business Tower Sector-66</span>
+                    {/* <span>905/B1, 9th Floor, Bestech Business Tower Sector-66</span> */}
+                    <span>A-818, 8th Floor, Bestech Business Tower, Mohali, Punjab 160062</span>
 
                 </div>
                 <div className="mb-3 d-flex align-items-center">
