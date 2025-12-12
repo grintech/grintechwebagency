@@ -9,7 +9,7 @@ import goal from "../../assets/images/goal.png";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Sideicons from "../../Components/Sideicons/Sidebar";
-import Image from "../../assets/images/owner.jpg"
+import Image from "../../assets/images/founder.webp"
 import data from '../OurWorks/data.js';
 import Form from "../Services/Form"
 import { WhatsAppWidget } from 'react-whatsapp-widget';
@@ -189,28 +189,49 @@ export default function About() {
             <div className="owner_section py-5">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-md-6 pe-md-5 mb-4 mb-md-0">
-                            <img src={Image} className='owner-img rounded-pill' alt="Rajesh Bhardwaj"></img>
-                        </div>
-                        <div className="col-md-6">
+                      
+                        <div className="  col-lg-7 ">
                             <h3 className='mb-3'><b> Meet Rajesh Kumar Bhardwaj</b></h3>
-                            <h5 className='mb-3'><b>Founder, Grintech Web Agency</b></h5>
-                            <div className=''>
-                                <div>
-                                    <h4></h4>
-                                    <div cite="https://www.huxley.net/bnw/four.html">
+                            <h6>I’m Rajesh Kumar  — my clients love to call me “Kumar” 😊</h6>
+                            <h5 className='mb-3'><b>Founder & CEO of Grintech Web Agency</b></h5>
+                            {/* <div className=''>
+                                 <div cite="https://www.huxley.net/bnw/four.html">
                                   <p> <sup> <i className="fa-solid fa-quote-left"></i></sup> <span className='text_green'><b>Welcome to the Grintech Family.</b></span> I’m <b>Rajesh Kumar Bhardwaj,</b> the proud founder of Grintech Web Agency. Our mission is to provide exceptional web solutions and digital solutions tailored to empower businesses of all sizes. With over 4 years of expertise in web technology, we have built a reputation for delivering reliable, scalable, and secure hosting services that help our clients thrive in the digital landscape.</p>
                                   
                                    <p> At Grintech, we believe that every business deserves a strong online presence. That’s why we’re committed to offering innovative solutions and unmatched support to ensure your success. Whether you’re launching your first website or managing a growing enterprise, we are here to make your journey seamless and productive. 
                                     </p>
                                     <p>Thank you for trusting Grintech Web Agency as your digital partner. Together, let’s unlock the full potential of the web!  <sup><i className="fa-solid fa-quote-right"></i></sup></p>
-                                    {/* <b> Warm regards,</b> <br /> 
-                                    <b>Rajesh Kumar Bhardwaj</b> <br />
-                                    <b>Founder, Grintech Web Agency </b>  */}
  
                                 </div>
+                            </div> */}
+                            <div className=''>
+                                 <div cite="https://www.huxley.net/bnw/four.html">
+                                  <p> <sup> <i className="fa-solid fa-quote-left"></i></sup> From a small village in Himachal Pradesh where I studied in government schools and graduated as a perfectly average student, to building an international digital agency that now serves clients in the USA, Australia, UK, Sweden, Spain, Israel, Germany, Netherlands, and UAE — my journey has been anything but ordinary.</p>
+                                  
+                                   <p> A Bachelor of Arts from HPU and an MBA in Marketing from VTU Belgaum (2008) completely changed the trajectory of my life. Bangalore opened my eyes to possibilities I never imagined back in the village. I worked in retail, banking, immigration, and recruitment, but the moment I stepped into IT software sales, I knew this was my calling.</p>
+                                   <p>In 2020, at the peak of the COVID-19 pandemic, I started Grintech Web Agency from home with just one computer. Today, I proudly lead a family of 20+ passionate professionals who deliver world-class services to clients across the globe. </p>
+                                   <p>
+                                    <b>What we do:</b>
+                                    <ul className=''>
+                                        <li>Custom Website Development & E-commerce Solutions</li>
+                                        <li>Mobile App Development (iOS & Android)</li>
+                                        <li>AWS-powered Shared Hosting & Cloud Solutions → <Link target='_blank' to="https://grincloudhost.com">https://grincloudhost.com</Link></li>
+                                        <li>White-Hat SEO, Digital Marketing & Brand Building → <Link target='_blank' to="https://whitehatseo.in">https://whitehatseo.in</Link></li>
+                                    </ul>
+                                   </p>
+                                   <p>GrinCloudHost and WhiteHatSEO.in are our newest ventures under the Grintech umbrella — built to help businesses grow faster with reliable hosting and ethical, result-driven marketing.</p>
+
+                                   <p>I believe in long-term partnerships, transparent communication, and delivering real value. My team and I don’t just build websites or run campaigns — we become part of your growth story.</p>
+
+                                   <p>From a village boy who barely passed exams to leading a company that powers digital success for businesses worldwide — if I can do it, anyone with determination and the right mindset can.</p>
+
+                                    <p>Always open to connecting with entrepreneurs, business owners, and digital enthusiasts. Let’s talk about how we can help your brand win online. <sup><i className="fa-solid fa-quote-right"></i></sup></p>
+ 
                                 </div>
                             </div>
+                        </div>
+                          <div className="col-lg-5 ps-lg-5 mb-4 mb-md-0">
+                            <img src={Image} className='owner-img ' alt="Rajesh Bhardwaj"></img>
                         </div>
                     </div>
                 </div>
