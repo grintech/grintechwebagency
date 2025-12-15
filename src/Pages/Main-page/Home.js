@@ -33,10 +33,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-import PartnerImage1 from "../../assets/images/partnerlogo/logo.png"
-import PartnerImage2 from "../../assets/images/partnerlogo/logo2.png"
+import PartnerImage1 from "../../assets/images/partnerlogo/malo.png"
+import PartnerImage2 from "../../assets/images/partnerlogo/boost.png"
 import PartnerImage3 from "../../assets/images/partnerlogo/logo3.png"
-import PartnerImage4 from "../../assets/images/partnerlogo/logo4.avif"
+import PartnerImage4 from "../../assets/images/partnerlogo/grincloudhost.png"
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
 import Client3 from './Client3.js';
@@ -549,16 +549,20 @@ const Home = () => {
       <Homeblog />
 
       <section className='businesspartner'>
-        <div className='container'> <h3>Our Business Partner</h3>
+        <div className='container'> <h3>Our Business Partner's</h3>
 
           <h6>Alliances</h6>
           <div className='row '>
             <div className='alldisplayflex'>
               {/* <img src={PartnerImage1} className="img-fluid w-50 " alt="Partner Image 1" /> */}
 
-              <Link className='w-50 text-center'> <img src={PartnerImage2} className="img-fluid " alt="Partner1" /> </Link>
+              <Link target='_blank' to="https://malo-tech.de/" className=' text-center'> <img src={PartnerImage1} className="img-fluid " alt="malo" /> </Link>
 
-              <Link target='_blank' to='https://whitehatseo.in' className='w-50 text-center'> <img src={PartnerImage3} className="img-fluid " alt="Partner2" /></Link>
+              <Link target='_blank' to='https://grincloud.host/' className=' text-center'> <img src={PartnerImage4} className="img-fluid " alt="grincloudhost" /></Link>
+              
+              <Link target='_blank' to='https://boostcommercialcleaning.com.au/' className=' text-center'> <img src={PartnerImage2} className="img-fluid " alt="boostcleaningmelbourne" /></Link>
+
+              <Link target='_blank' to='https://whitehatseo.in' className=' text-center'> <img src={PartnerImage3} className="img-fluid " alt="Partner2" /></Link>
 
             </div>
           </div>

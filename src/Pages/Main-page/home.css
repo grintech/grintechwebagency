@@ -699,7 +699,7 @@ div#client2_image img {
 } */
 
 .businesspartner {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 20px;
 
   display: flex;
@@ -859,6 +859,9 @@ a[href*="elfsight.com/google-reviews-widget"] {
 }
 
 
+.businesspartner .alldisplayflex img{height: 80px;}
+
+
 @media only screen and (min-width: 1400px) {
   .call-to-action h3 {
     font-size: 25px !important;
@@ -973,6 +976,7 @@ a[href*="elfsight.com/google-reviews-widget"] {
   section#home-banner::after {
     height: 1200px;
   }
+  .alldisplayflex {position: relative; gap:20px; flex-wrap: wrap;}
 }
 @media only screen and (max-width: 767px) {
   .home_process .card {
@@ -1020,6 +1024,10 @@ a[href*="elfsight.com/google-reviews-widget"] {
   section#home-banner::after {
     height: 1300px;
   }
+   .businesspartner .alldisplayflex {justify-content: center !important;}
+
+  .businesspartner .alldisplayflex img{height: 65px;}
+
 }
 
 @media only screen and (max-width: 475px) {
@@ -1071,6 +1079,9 @@ a[href*="elfsight.com/google-reviews-widget"] {
   .process_box2::after {
     display: none !important;
   }
+
+   .businesspartner .alldisplayflex img{height: 55px;}
+
 }
 @media only screen and (max-width: 385px) {
   .home_process .card {
@@ -1122,6 +1133,7 @@ a[href*="elfsight.com/google-reviews-widget"] {
   section#home-banner::after {
     height: 1350px;
   }
+   .businesspartner .alldisplayflex img{height: 45px;}
 }
 
 /*---------------------------*/

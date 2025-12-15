@@ -60,34 +60,34 @@ const TeamTabs = () => {
               <p className="team-role">Team Leader (Designing)</p>
             </div>
           </div>
-          <div className="col-6 col-md-3 ">
+          {/* <div className="col-6 col-md-3 ">
             <div className="team-box dark ">
               <img src="/team/beena.png" className="rounded-circle team-img" alt="Beena" />
               <h5 className="team-name">Beena Mehta</h5>
               <p className="team-role">SEO Team Leader</p>
             </div>
-          </div>
+          </div> */}
           <div className="col-6 col-md-3 ">
-            <div className="team-box light dark1">
+            <div className="team-box light dark">
               <img src="/team/mamta.jpg" className="rounded-circle team-img" alt="Beena" />
               <h5 className="team-name">Mamta</h5>
               <p className="team-role">Senior CMS Developer</p>
             </div>
           </div>
-          <div className="col-6 col-md-3 ">
+          {/* <div className="col-6 col-md-3 ">
             <div className="team-box dark light1">
               <img src="/team/sunil.jpg" className="rounded-circle team-img" alt="Sunil" />
               <h5 className="team-name">Sunil</h5>
               <p className="team-role">SEO Executive</p>
             </div>
-          </div>
-          <div className="col-6 col-md-3 ">
+          </div> */}
+          {/* <div className="col-6 col-md-3 ">
             <div className="team-box dark light1 ">
               <img src="/team/anupama.jpeg" className="rounded-circle team-img" alt="Anupama" />
               <h5 className="team-name">Anupama</h5>
               <p className="team-role">SEO Executive</p>
             </div>
-          </div>
+          </div> */}
            <div className="col-6 col-md-3 ">
             <div className="team-box light dark1">
               <img src="/team/wasim.png" className="rounded-circle team-img" alt="Wasim" />
@@ -96,52 +96,61 @@ const TeamTabs = () => {
             </div>
           </div>
          <div className="col-6 col-md-3 ">
-            <div className="team-box dark ">
+            <div className="team-box dark light1">
               <img src="/team/atul.jpeg" className="rounded-circle team-img" alt="Atul" />
               <h5 className="team-name">Atul Rauthan</h5>
               <p className="team-role">Frontend Developer</p>
             </div>
           </div>
          
-          <div className="col-6 col-md-3 ">
+          {/* <div className="col-6 col-md-3 ">
             <div className="team-box light  ">
               <img src="/team/muskan.jpg" className="rounded-circle team-img" alt="Muskan" />
               <h5 className="team-name">Muskan</h5>
               <p className="team-role">Wordpress Developer</p>
             </div>
-          </div>
-          
-          <div className="col-6 col-md-3 ">
-            <div className="team-box light ">
-              <img src="/team/tanuj.jpg" className="rounded-circle team-img" alt="Tanuj" />
-              <h5 className="team-name">Tanuj</h5>
-              <p className="team-role">Php Developer</p>
-            </div>
-          </div>
+          </div> */}
+
            <div className="col-6 col-md-3  ">
-            <div className="team-box dark ">
+            <div className="team-box dark light1">
               <img src="/team/saif.jpg" className="rounded-circle team-img" alt="Saif" />
               <h5 className="team-name">Saif</h5>
-              <div className="d-flex align-items-center">
-                <p className="team-role">Mobile App Developer </p><i style={{fontSize:"20px"}} class=" text_green ms-1 fa-solid fa-mobile-screen-button"></i>
+                <p className="team-role">React Js Developer </p>
+            </div>
+          </div>
+
+          <div className="col-6 col-md-3 ">
+            <div className="team-box light dark1">
+              <img src="/team/tanuj.jpg" className="rounded-circle team-img" alt="Tanuj" />
+              <h5 className="team-name">Tanuj</h5>
+               <div className="d-flex align-items-center">
+               <p className="team-role">Flutter Developer</p><i style={{fontSize:"20px"}} class=" text_green ms-1 fa-solid fa-mobile-screen-button"></i>
               </div>
             </div>
           </div>
           
+          
           <div className="col-6 col-md-3 ">
-            <div className="team-box light dark1">
+            <div className="team-box light dark">
               <img src="/team/shubham.jpg" className="rounded-circle team-img" alt="Adam" />
               <h5 className="team-name">Shubham</h5>
               <p className="team-role">Junior Php Developer</p>
             </div>
           </div>
           <div className="col-6 col-md-3 ">
-            <div className="team-box dark light1">
+            <div className="team-box  light">
+              <img src="/team/arshita.jpg" className="rounded-circle team-img" alt="Arshita" />
+              <h5 className="team-name">Arshita</h5>
+              <p className="team-role">CMS developer</p>
+            </div>
+          </div>
+          {/* <div className="col-6 col-md-3 ">
+            <div className="team-box  light">
               <img src="/team/anjana.jpg" className="rounded-circle team-img" alt="Anjana" />
               <h5 className="team-name">Anjana</h5>
               <p className="team-role">React Js Developer</p>
             </div>
-          </div>
+          </div> */}
          
         </div>
       )}
