@@ -4,9 +4,13 @@ import Footer from '../../Components/Footer/Footer';
 import Sidebar from '../../Components/Sideicons/Sidebar';
 import './singleblog.css';
 import { useParams } from 'react-router';
-import data from "../../Components/country.json";
+// import data from "../../Components/country.json";
 import { Helmet } from 'react-helmet';
 import ReCAPTCHA from 'react-google-recaptcha';
+
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
 
 const Singleblog = () => {
   const [message, setMessage] = useState("");
@@ -168,7 +172,7 @@ const Singleblog = () => {
                       />
                     </div>
 
-                    <div className="phone-input-container mb-3">
+                    {/* <div className="phone-input-container mb-3">
                       <select className='optionSelection' id="country-code" name="countryCode">
                         <option value="+1">+1</option>
                         {data.map((item) => (
@@ -191,7 +195,30 @@ const Singleblog = () => {
                         onInput={(event) => event.target.setCustomValidity('')}
                         required
                       />
+                    </div> */}
+
+                    <div className="mb-3">
+                      <PhoneInput
+                        country={'us'}
+                        value={phone}
+                        enableSearch
+                        onChange={(value, country) => {
+                          const dialCode = country.dialCode; // 91
+                          const numberOnly = value.replace(dialCode, '');
+                          const formattedPhone = `+${dialCode}-${numberOnly}`;
+                          setPhone(formattedPhone);
+                        }}
+                        inputProps={{
+                          name: 'phone',
+                          required: true,
+                          placeholder: 'Phone...',
+                        }}
+                        inputClass="form-control form_custom_input"
+                        containerClass="w-100"
+                      />
                     </div>
+
+
 
                     <div className="mb-3 col-md-12 col-sm-12">
                       <input

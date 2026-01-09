@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 
 import data from "../../Components/country1.json";
 import ReCAPTCHA from "react-google-recaptcha";
+
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+
+
 const Banner = () => {
   const form = useRef();
   const recaptchaRef = useRef(null);
@@ -78,27 +84,27 @@ const Banner = () => {
       if (message) {
         const timer = setTimeout(() => {
           setMessage("");
-        }, 4000); // Hide message after 4 seconds
+        }, 4000); 
   
-        return () => clearTimeout(timer); // Cleanup timeout on component unmount
+        return () => clearTimeout(timer); 
       }
     }, [message]);
 
   
-  const handlePhoneChange = (e) => {
-    const sanitizedValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
-    if (sanitizedValue.length <= 11) {
-      setPhone(sanitizedValue);
-    }
-  };
+  // const handlePhoneChange = (e) => {
+  //   const sanitizedValue = e.target.value.replace(/\D/g, ""); 
+  //   if (sanitizedValue.length <= 14) {
+  //     setPhone(sanitizedValue);
+  //   }
+  // };
 
-  const handleInvalidphone = (event) => {
-    event.target.setCustomValidity("Enter valid phone number");
-  };
+  // const handleInvalidphone = (event) => {
+  //   event.target.setCustomValidity("Enter valid phone number");
+  // };
 
-  const handleInputphone = (event) => {
-    event.target.setCustomValidity("");
-  };
+  // const handleInputphone = (event) => {
+  //   event.target.setCustomValidity("");
+  // };
 
   const handleInvalidname = (event) => {
     event.target.setCustomValidity("Name must be more than 3 characters.");
@@ -153,18 +159,7 @@ const Banner = () => {
         id="home-banner"
         style={{ backgroundImage: `url(${homebanner})` }}
       >
-        {/* <div className="banner-content container">
-          <h1>We're not just building <span style={{ color: "#23C014" }}> Websites & Apps</span> We're building <span style={{ color: "#23C014" }}>Brands</span></h1>
-        
-          <p>Welcome to our mobile and web app development agency! Grintech Web Agency specializes in creating high-quality, user-centric digital solutions tailored to meet the unique needs of businesses and individuals alike. </p>
-          <div className="button">
-            <button type="button" className="btn start-btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">Start A Project</button>
-
-            <Link className='start-link' to='https://www.upwork.com/freelancers/~01bb68f80af91ff72f' target="_blank">
-              <button type="button" className="btn start-btn" >Hire Us On Upwork</button>
-            </Link>
-          </div>
-        </div> */}
+      
         <div className="row align-items-center">
           <div className=" col-lg-7 col-11 mx-auto">
             <div className="banner-content container-fluid">
@@ -181,15 +176,7 @@ const Banner = () => {
                 businesses and individuals alike.
               </p>
               <div className="button">
-                {/* <button
-                  type="button"
-                  className="btn start-btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal1"
-                >
-                  Start A Project
-                </button> */}
-
+               
                 <Link
                   className="start-link"
                   to="https://www.upwork.com/freelancers/~01bb68f80af91ff72f"
@@ -232,7 +219,7 @@ const Banner = () => {
                       />
                     </div>
 
-                    <div className="phone-input-container mb-3">
+                    {/* <div className="phone-input-container mb-3">
                       <select
                         className="optionSelection"
                         id="country-code"
@@ -245,7 +232,7 @@ const Banner = () => {
                             className="pt-3"
                             value={item.dial_code}
                           >
-                            {/* <img src={item.flag} alt="flag" /> */}
+                          
                             {item.dial_code}
                           </option>
                         ))}
@@ -258,13 +245,36 @@ const Banner = () => {
                         className="form-control form_custom_input"
                         pattern="[0-9]{9,12}"
                         value={phone}
-                        maxLength="11"
+                        maxLength="14"
                         onChange={handlePhoneChange}
                         onInvalid={handleInvalidphone}
                         onInput={handleInputphone}
                         required
                       />
+                    </div> */}
+
+                    <div className="mb-3">
+                      <PhoneInput
+                        country={'us'}
+                        value={phone}
+                        enableSearch
+                        onChange={(value, country) => {
+                          const dialCode = country.dialCode;
+                          const numberOnly = value.replace(dialCode, '');
+                          const formattedPhone = `+${dialCode}-${numberOnly}`;
+                          setPhone(formattedPhone);
+                        }}
+                        inputProps={{
+                          name: 'phone',
+                          required: true,
+                          placeholder: 'Phone...',
+                        }}
+                        inputClass="form-control form_custom_input"
+                        containerClass="w-100"
+                      />
                     </div>
+
+
 
                     <div className="mb-3 col-md-12 col-sm-12">
                       <input
@@ -471,7 +481,7 @@ const Banner = () => {
                     />
                   </div>
 
-                  <div className="phone-input-container mb-3">
+                  {/* <div className="phone-input-container mb-3">
                     <select
                       className="optionSelection"
                       id="country-code"
@@ -484,7 +494,7 @@ const Banner = () => {
                           className="pt-3"
                           value={item.dial_code}
                         >
-                          {/* <img src={item.flag} alt="flag" /> */}
+                        
                           {item.dial_code}
                         </option>
                       ))}
@@ -497,13 +507,35 @@ const Banner = () => {
                       className="form-control form_custom_input"
                       pattern="[0-9]{9,12}"
                       value={phone}
-                      maxLength="11"
+                      maxLength="14"
                       onChange={handlePhoneChange}
                       onInvalid={handleInvalidphone}
                       onInput={handleInputphone}
                       required
                     />
-                  </div>
+                  </div> */}
+
+                  <div className="mb-3">
+                  <PhoneInput
+                    country={'us'}
+                    value={phone}
+                    enableSearch
+                    onChange={(value, country) => {
+                      const dialCode = country.dialCode;
+                      const numberOnly = value.replace(dialCode, '');
+                      const formattedPhone = `+${dialCode}-${numberOnly}`;
+                      setPhone(formattedPhone);
+                    }}
+                    inputProps={{
+                      name: 'phone',
+                      required: true,
+                      placeholder: 'Phone...',
+                    }}
+                    inputClass="form-control form_custom_input"
+                    containerClass="w-100"
+                  />
+                </div>
+
 
                   <div className="mb-3 col-md-12 col-sm-12">
                     <input

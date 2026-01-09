@@ -116,3 +116,17 @@ code {
 
 
 
+.react-tel-input{width: 100%;}
+.react-tel-input .form-control{width: 100% !important; height: 45px !important;}
+.react-tel-input .country-list .search-emoji{display: none !important;}
+.react-tel-input .country-list .search-box{width: 260px !important; height: 35px !important;}
+.hover_form .form-select{padding: 10px;}
+.singleblog_form .form-select{padding: 10px;}
+.banner_form_card .form-select{padding: 10px;}
+.banner_form_card .react-tel-input .country-list .country{text-align: left !important;}
+.banner_form_card .react-tel-input .country-list .country-name{color: #000 !important;}
+
+@media screen and (max-width:375px) {
+  .react-tel-input .country-list{width:250px !important;}
+  .react-tel-input .country-list .search-box{width: 200px !important;}
+}

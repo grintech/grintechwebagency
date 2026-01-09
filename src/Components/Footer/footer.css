@@ -79,3 +79,20 @@
   margin-bottom: 0;
   font-weight: 600;
 }
+
+
+.footer .form_button{font-size: 15px; height: 45px;}
+.hover_form .form_button{font-size: 15px; height: 45px;}
+.hover_form a.btn.form_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.singleblog_form .form_button{font-size: 15px; height: 45px;}
+.singleblog_form a.btn.form_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .form-select {padding: 10px;}

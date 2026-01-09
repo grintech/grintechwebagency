@@ -13,6 +13,8 @@
   border-radius: 10px;
 }
 
+.contact___form .form-control, .contact___form .form-select {padding: 10px;}
+
 .contact__sidebar{
   padding: 50px 33px;
   background-color: whitesmoke;

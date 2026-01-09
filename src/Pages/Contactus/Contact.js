@@ -10,6 +10,10 @@ import { Helmet } from 'react-helmet';
 import { WhatsAppWidget } from 'react-whatsapp-widget';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+
 const Contact = () => {
   const form = useRef();
   const recaptchaRef = useRef(null);
@@ -71,20 +75,20 @@ const Contact = () => {
     }
   }, [message]);
 
-  const handlePhoneChange = (e) => {
-    const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-    if (sanitizedValue.length <= 11) {
-      setPhone(sanitizedValue);
-    }
-  };
+  // const handlePhoneChange = (e) => {
+  //   const sanitizedValue = e.target.value.replace(/\D/g, ''); 
+  //   if (sanitizedValue.length <= 11) {
+  //     setPhone(sanitizedValue);
+  //   }
+  // };
 
-  const handleInvalidphone = (event) => {
-    event.target.setCustomValidity('Enter valid phone number');
-  };
+  // const handleInvalidphone = (event) => {
+  //   event.target.setCustomValidity('Enter valid phone number');
+  // };
 
-  const handleInputphone = (event) => {
-    event.target.setCustomValidity('');
-  };
+  // const handleInputphone = (event) => {
+  //   event.target.setCustomValidity('');
+  // };
 
   const handleInvalidname = (event) => {
     event.target.setCustomValidity('Name must be more than 3 characters.');
@@ -163,40 +167,28 @@ const Contact = () => {
                         placeholder="Last name"
                       />
                     </div>
-                    <label htmlFor="exampleInputEmail1" className="form-label text-dark">Phone <span className='star'>*</span></label>
-                    <div className="phone-input-container mb-3">
-                      <select
-                        id="country-code"
-                        className='optionSelection'
-                        name="countryCode"
-                      >
-                        <option value="+1">+1</option>
-                        {data.map((item) => (
-                          <option
-                            key={`${item.dial_code}-${item.name}`}
-                            className='pt-3'
-                            value={item.dial_code}
-                          >
-                            {item.dial_code}
-                          </option>
-                        ))}
-                      </select>
-                      <input
-                        type="tel"
-                        name="phone"
-                        id="phone"
-                        className="form-control form_custom_input"
-                        pattern="[0-9]{9,12}"
-                        value={phone}
-                        maxLength="11"
-                        onChange={handlePhoneChange}
-                        onInvalid={handleInvalidphone}
-                        onInput={handleInputphone}
-                        aria-describedby="emailHelp"
-                        required
-                      />
-                      <div id="validation-message"></div>
-                    </div>
+
+
+                    <PhoneInput
+                      country={'us'}
+                      value={phone}
+                      enableSearch
+                      onChange={(value, country) => {
+                        const dialCode = country.dialCode; // 91
+                        const numberOnly = value.replace(dialCode, '');
+                        const formattedPhone = `+${dialCode}-${numberOnly}`;
+                        setPhone(formattedPhone);
+                      }}
+                      inputProps={{
+                        name: 'phone',
+                        required: true,
+                      }}
+                      inputClass="form-control"
+                      containerClass="mb-3"
+                    />
+
+
+
                     <div className="mb-3 col-12">
                       <input
                         type="email"
@@ -214,14 +206,6 @@ const Contact = () => {
                       />
                       <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
-                    {/* <div className="mb-3 col-md-6">
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="exampleInputPassword1"
-                        placeholder="Website URL"
-                      />
-                    </div> */}
                   </div>
                   <select
                     className="form-select mb-3"
@@ -251,7 +235,6 @@ const Contact = () => {
                       name="message"
                       id="message"
                       value={messageError}
-                      // onInvalid={handleInvalidmessage}
                       onInput={handleInputmessage}
                       required
                     ></textarea>
@@ -260,7 +243,7 @@ const Contact = () => {
                     {/* Google reCAPTCHA */}
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // Replace with your site key
+                    sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" 
                     onChange={handleCaptchaChange}
                   />
 
@@ -286,14 +269,7 @@ const Contact = () => {
                 <p>
                   <Link className='contact__sidebar_Link' to="mailto:info@grintechwebagency.com">info@grintechwebagency.com</Link>
                 </p>
-                {/* <h4>
-                  For Reseller Partner
-                </h4>
-                <p>
-                  <Link to="mailto:info@grintechwebagency.com">
-                    info@grintechwebagency.com
-                  </Link>
-                </p> */}
+               
                 <h4>
                   HR Queries
                 </h4>
@@ -355,7 +331,6 @@ const Contact = () => {
                 Instagram</Link></p>
             </div>
             <div className='col-lg-4 col-md-4 col-sm-12 contact__items'>
-              {/* <p className=''><img src='/img/usa.png' alt='flag' /> <a href="tel:(+1)833232-6622"> (+1) 833232-6622</a></p> */}
               <p><Icon icon="emojione-v1:flag-for-india" width="24" height="24" /> <a href="tel:+911724643298">(+91) 8264420387</a></p>
             </div>
 

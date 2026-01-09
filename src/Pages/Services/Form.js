@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import data from "../../Components/country1.json";
+// import data from "../../Components/country1.json";
 import ReCAPTCHA from 'react-google-recaptcha';
+
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
 
 const Form = () => {
   const form = useRef();
@@ -66,20 +70,20 @@ const Form = () => {
 
 
 
-  const handlePhoneChange = (e) => {
-    const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-    if (sanitizedValue.length <= 11) {
-      setPhone(sanitizedValue);
-    }
-  };
+  // const handlePhoneChange = (e) => {
+  //   const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+  //   if (sanitizedValue.length <= 11) {
+  //     setPhone(sanitizedValue);
+  //   }
+  // };
 
-  const handleInvalidphone = (event) => {
-    event.target.setCustomValidity('Enter valid phone number');
-  };
+  // const handleInvalidphone = (event) => {
+  //   event.target.setCustomValidity('Enter valid phone number');
+  // };
 
-  const handleInputphone = (event) => {
-    event.target.setCustomValidity('');
-  };
+  // const handleInputphone = (event) => {
+  //   event.target.setCustomValidity('');
+  // };
 
   const handleInvalidname = (event) => {
     event.target.setCustomValidity('Name must be more than 3 characters.');
@@ -135,7 +139,7 @@ const Form = () => {
             />
           </div>
 
-          <div className="phone-input-container mb-3">
+          {/* <div className="phone-input-container mb-3">
             <select 
               className='optionSelection' 
               id="country-code" 
@@ -148,7 +152,7 @@ const Form = () => {
                   className='pt-3' 
                   value={item.dial_code}
                 >
-                  {/* <img src={item.flag} alt='flag' /> */}
+                
                   {item.dial_code}
                 </option>
               ))}
@@ -167,7 +171,30 @@ const Form = () => {
               onInput={handleInputphone} 
               required 
             />
-          </div>
+          </div> */}
+
+          <div className="mb-3">
+          <PhoneInput
+            country={'us'}
+            value={phone}
+            enableSearch
+            onChange={(value, country) => {
+              const dialCode = country.dialCode; // 91
+              const numberOnly = value.replace(dialCode, '');
+              const formattedPhone = `+${dialCode}-${numberOnly}`;
+              setPhone(formattedPhone);
+            }}
+            inputProps={{
+              name: 'phone',
+              required: true,
+              placeholder: 'Phone...',
+            }}
+            inputClass="form-control form_custom_input"
+            containerClass="w-100"
+          />
+        </div>
+
+
 
           <div className="mb-3 col-md-12 col-sm-12">
             <input 

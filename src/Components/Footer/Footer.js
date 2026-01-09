@@ -9,6 +9,10 @@ import { Link } from "react-router-dom";
 import data from "../../Components/country1.json";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
+
 
 const Footer = () => {
 
@@ -56,8 +60,8 @@ const Footer = () => {
           setEmail("");
           setSelect("");
           setMessageError("");
-          form.current.reset(); // Reset the form fields
-          recaptchaRef.current.reset(); // Reset recaptcha
+          form.current.reset();
+          recaptchaRef.current.reset(); 
         } else {
           setMessage("Oops! Something went wrong. Please try again.");
         }
@@ -77,24 +81,21 @@ const Footer = () => {
       }
     }, [message]);
   
+
     // const handlePhoneChange = (e) => {
-    //   const sanitizedValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-    //   setPhone(sanitizedValue);
+    //   const sanitizedValue = e.target.value.replace(/\D/g, ""); 
+    //   if (sanitizedValue.length <= 11) {
+    //     setPhone(sanitizedValue);
+    //   }
     // };
-    const handlePhoneChange = (e) => {
-      const sanitizedValue = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
-      if (sanitizedValue.length <= 11) {
-        setPhone(sanitizedValue);
-      }
-    };
   
-    const handleInvalidphone = (event) => {
-      event.target.setCustomValidity("Enter valid phone number");
-    };
+    // const handleInvalidphone = (event) => {
+    //   event.target.setCustomValidity("Enter valid phone number");
+    // };
   
-    const handleInputphone = (event) => {
-      event.target.setCustomValidity("");
-    };
+    // const handleInputphone = (event) => {
+    //   event.target.setCustomValidity("");
+    // };
   
     const handleInvalidname = (event) => {
       event.target.setCustomValidity("Name must be more than 3 characters.");
@@ -118,9 +119,6 @@ const Footer = () => {
       event.target.setCustomValidity("");
     };
   
-    // const handleInvalidmessage = (event) => {
-    //   event.target.setCustomValidity('Message cannot be left blank');
-    // };
   
     const handleInputmessage = (e) => {
       const value = e.target.value;
@@ -233,24 +231,7 @@ const Footer = () => {
                       />
                     </div>
 
-                    <div className="phone-input-container col-md-6 mb-3">
-                      {/* <select
-                        className="optionSelection"
-                        id="country-code"
-                        name="countryCode"
-                      >
-                        <option value="+1">+1</option>
-                        {data.map((item) => (
-                          <option
-                            key={`${item.dial_code}-${item.name}`}
-                            className="pt-3"
-                            value={item.dial_code}
-                          >
-                            <img src={item.flag} alt="flag" />
-                            {item.dial_code}
-                          </option>
-                        ))}
-                      </select> */}
+                    {/* <div className="phone-input-container col-md-6 mb-3">
                       <input
                         type="tel"
                         placeholder="Phone..."
@@ -265,7 +246,29 @@ const Footer = () => {
                         onInput={handleInputphone}
                         required
                       />
-                    </div>
+                    </div> */}
+
+                    <div className="col-md-6 mb-3">
+                    <PhoneInput
+                      country={'us'}
+                      value={phone}
+                      enableSearch
+                      onChange={(value, country) => {
+                        const dialCode = country.dialCode;      // 91
+                        const numberOnly = value.replace(dialCode, '');
+                        const formattedPhone = `+${dialCode}-${numberOnly}`;
+                        setPhone(formattedPhone);
+                      }}
+                      inputProps={{
+                        name: 'phone',
+                        required: true,
+                        placeholder: 'Phone...'
+                      }}
+                      inputClass="form-control form_custom_input"
+                      containerClass="w-100"
+                    />
+                  </div>
+
 
                     <div className="mb-3 col-md-6 col-sm-12">
                       <input
@@ -318,7 +321,6 @@ const Footer = () => {
                       name="message"
                       id="message"
                       value={messageError}
-                      // onInvalid={handleInvalidmessage}
                       onInput={handleInputmessage}
                       required
                     ></textarea>
@@ -326,7 +328,7 @@ const Footer = () => {
 
                   <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" // site key
+                  sitekey="6Lcmhv8qAAAAAAct1lIswDMrZtmrKqTMx_yJO0A2" 
                   onChange={handleCaptchaChange}
                 />
 
@@ -350,7 +352,6 @@ const Footer = () => {
                 <div className=" address-bar pt-0">
                 <div className="mb-3 d-flex align-items-center">
                     <span className="ficon"><Icon icon="material-symbols:location-on-outline-rounded" width="30" /></span>
-                    {/* <span>905/B1, 9th Floor, Bestech Business Tower Sector-66</span> */}
                     <span>A-818, 8th Floor, Bestech Business Tower, Mohali, Punjab 160062</span>
 
                 </div>
@@ -364,7 +365,6 @@ const Footer = () => {
                 </div>
                 <div >
                     <ul className="f-links ">
-                        {/* <li><Link to="https://www.facebook.com/grintechwebagency1/" target="_blank"><Icon icon="typcn:social-facebook" width="25" /></Link></li> */}
                         <li><Link to="https://www.facebook.com/grintechwebagency1/" target="_blank"><Icon icon="typcn:social-facebook" width="25" /></Link></li>
                         <li><Link to="https://in.linkedin.com/company/grin-tech-web-agency" target="_blank"><Icon icon="typcn:social-linkedin" width="25" /></Link></li>
                         <li><Link to="https://www.instagram.com/grintechwebagency/" target="_blank"><Icon icon="typcn:social-instagram" width="25" /></Link></li>
