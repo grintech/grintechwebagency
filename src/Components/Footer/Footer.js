@@ -384,7 +384,7 @@ const Footer = () => {
       <section className="footer-bottom">
         <div className="container">
             <div className="row">
-                <p>© GRINTECH WEB AGENCY 2025. ALL RIGHTS RESERVED.</p>
+                <p>© GRINTECH WEB AGENCY {new Date().getFullYear()}. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
       </section>
