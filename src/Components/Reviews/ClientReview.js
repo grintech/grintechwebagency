@@ -8,7 +8,7 @@ const ClientReview = () => {
 
         <div className="row mt-3 bgd py-2 mx-1">
           {/* Video 1 */}
-          <div className="col-md-12 col-lg-4 mb-3">
+          <div className="col-md-6 col-xxl-3 mb-3">
             <iframe
               className="w-100"
               height="315"
@@ -21,7 +21,7 @@ const ClientReview = () => {
           </div>
 
           {/* Video 2 */}
-          <div className="col-md-12 col-lg-4 mb-3">
+          <div className="col-md-6 col-xxl-3 mb-3">
             <iframe
               className="w-100"
               height="315"
@@ -34,7 +34,7 @@ const ClientReview = () => {
           </div>
 
           {/* Shorts Video */}
-          <div className="col-md-12 col-lg-4 mb-3">
+          <div className="col-md-6 col-xxl-3 mb-3">
             <iframe
               className="w-100"
               height="315"
@@ -45,6 +45,19 @@ const ClientReview = () => {
               allowFullScreen
             ></iframe>
           </div>
+
+          {/* Shorts Video */}
+          <div className="col-md-6 col-xxl-3 mb-3">
+          <iframe
+            className="w-100"
+            height="315"
+            src="https://www.youtube.com/embed/P35aj7RbSfo?rel=0&modestbranding=1"
+            title="Client Review Shorts 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
         </div>
       </div>
     </section>
